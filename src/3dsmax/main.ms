@@ -159,35 +159,217 @@ fn check_max_scene_units_system_type systemUnit=
    return units.SystemType as string == systemUnit
 )
 
+/*
+ * Elements count
+ * Check if the scene has render elements (AOVs excluded)
+ */
+fn check_max_elements_count= 
+(
+   if not isArnold() do
+   (
+     local re = maxOps.GetCurRenderElementMgr()
 
--- frame_single  
--- frame_range  
--- frame_nth  
--- output_enabled  
--- output_isnetworkpath  
--- output_movieformat
+     local elements = re.numRenderElements()
+     return elements > 0
+   )
+   
+   return true
+)
+ 
+/*
+ * Elements active
+ * Check if the scene has elements activated (AOVs excluded)
+ */
+fn check_max_elements_active=
+(
+   if not isArnold() do
+   (
+      local re = maxOps.GetCurRenderElementMgr()
+      if re != undefined then
+      (
+         return re.GetElementsActive()
+      )
+   )
+
+   return true
+)
+
+/*
+ * Vray distributed rendering 
+ * Check if the Vray distributed rendering is disabled
+ */
+fn check_max_vray_system_dr=
+(
+   if isVray() do
+   (
+      return renderers.current.system_distributedRender == false
+   )
+)
+
+/*
+ * Vray frame stamp 
+ * Checks if the Vray Frame Stamp is disabled
+ */
+fn check_max_vray_system_frame_stamp=
+(
+   if isVray() do
+   (
+      return renderers.current.system_frameStamp_on == false
+   )
+)
+
+/*
+ * Vray mask value
+ * Checks if vray render mask are disabled
+ */
+fn check_max_vray_render_mask=
+(
+   if isVray() do
+   (
+      return renderers.current.imageSampler_renderMask_type == 0
+   )
+)
+
+/*
+ * Vray Material override (Material)
+ * Check if material override has a no material assigned
+ */
+fn check_max_vray_override_disabled=
+(
+   if isVray() do
+   (
+      renderers.current.options_overrideMtl_mtl == undefined
+   )
+)
+
+/*
+ * Vray hidden lights
+ * Checks if render hidden lights is disabled
+ */
+fn check_max_vray_hidden_lights=
+(
+   if isVray() do
+   (
+      return renderers.current.options_hiddenLights == false
+   )
+)
+
+/*
+ * Corona distributed rendering
+ * Check if the Corona distributed rendering is disabled
+ */
+fn check_max_corona_system_dr=
+(
+   if isCorona() do
+   (
+      return renderers.current.dr_enable == false
+   )
+)
+
+/*
+ * Vray vfb region
+ * Check if the Vray VFB region is disabled
+ */
+fn check_max_vray_vfb_region=
+(
+   if isVray() do
+   (
+      deepEqual (vfbControl #getregion) #(#(0,0,0,0))
+   )
+)
+
+/*
+ * Vray vfb mousetrack
+ * Checks if Vray vfb mousetrack is disabled
+ */
+
+fn check_max_vray_vfb_mousetrack=
+(
+   if isVray() do
+   (
+      item = vfbControl #trackmouse
+      found = findItem item 0
+      if found == 1 then
+         return true
+      else
+         return false
+   )
+)
+
+/*
+ * Corona distributed rendering search LAN
+ * Check if the Corona distributed rendering (search Lan) is disabled
+ */
+fn check_max_corona_system_dr_searchlan=
+(
+   if isCorona() do
+   (
+      return renderers.current.dr_searchDuringRender == false
+   )
+)
+
+/*
+ * Corona material override
+ * Check if material override is disabled
+ */
+fn check_max_corona_override_disabled=
+(
+   if isCorona() do
+   (
+      return renderers.current.mtlOverride_enabled == false
+   )
+)
+
+/*
+ * Corona material override (Material)
+ * Check if material override has a no material assigned
+ */
+fn check_max_corona_override_material_none=
+(
+   if isCorona() do
+   (
+      return renderers.current.mtlOverride == undefined
+   )
+)
+
+/*
+ * Corona infinite render
+ * Checks if no limits are set in the render settings
+ */
+fn check_max_corona_infinite_render=
+(
+   if isCorona() do
+   (
+      return (
+		      renderers.current.progressive_passLimit != 0 and 
+		      renderers.current.progressive_timeLimit != 0 and
+			   renderers.current.adaptivity_targetError != 0.0
+		   )
+   )
+)
+
+/*
+ * Corona vfb region
+ * Checks if Corona vfb region is disabled
+ */
+fn check_max_corona_vfb_region=
+(
+   if isCorona() do
+   (
+      renderers.current.system_vfbRegions.count == 3
+   )
+)
+ 
+
+
+
 -- output_exists 
--- units_display_type  
--- units_system_type  
--- production  
--- pixel_aspect  
--- frame_fps  
--- elements_active ### if not arnold
 -- elements_duplicate ### if not arnold
--- elements_count --- greater than 0 / if not arnold
+
 -- missing_plugins
+-- assets_exists
+-- assets_unc_path
 
--- vray_vfb_region
--- vray_vfb_mousetrack
--- vray_dr
--- vray_system_dontrenderfinal
--- vray_system_override
--- vray_system_mask_selected
--- vray_system_mask_value
 
--- corona_vfb_region
--- corona_dr
--- corona_dr_searchlan
--- corona_override
--- corona_infinite_render
+
 
