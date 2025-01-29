@@ -15,6 +15,19 @@ Read more and try out RenderFlow [here](https://www.pulze.io/products/render-flo
 ## Getting Started
 ...
 
+
+## Naming Convention
+
+The naming convention for the checks is as follows:
+
+```
+-- MaxScript
+fn check_<host>_<category>_<name>= 
+(
+    ...
+)
+```
+
 ## Contributing
 If you have any suggestions or improvements, please feel free to submit a pull request or open an issue. We are also happy to receive feedback and improve the exsiting checks. Please note that the primary aim of this project is to serve the needs of RenderFlow users. As a result, very unique and domain-specific checks may not be included.
 

@@ -1,8 +1,9 @@
 /*
  * Untitled filename
  * Check if the filename is empty (untitled)
+ * Save your file before submitting
  */
-fn check_max_untitled_filename=
+fn check_max_filename_untitled=
 (
    return maxfilename != ""
 )
@@ -11,7 +12,7 @@ fn check_max_untitled_filename=
  * Autoback filename
  * Check if the filename contains the word "autoback"
  */
-fn check_max_autoback_filename=
+fn check_max_filename_autoback=
 (
    return findString (toLower maxfilename) "autoback" == undefined
 )
@@ -20,7 +21,7 @@ fn check_max_autoback_filename=
  * Recover filename
  * Check if the filename contains the word "recover"
  */
-fn check_max_recover_filename=
+fn check_max_filename_recover=
 (
    return findString maxfilename "recover" == undefined
 )
@@ -29,7 +30,7 @@ fn check_max_recover_filename=
  * Empty scene
  * Check if the scene is empty
  */
-fn check_max_empty_scene=
+fn check_max_scene_empty=
 (
    return rootScene.world.children.count > 0
 )   
@@ -44,10 +45,28 @@ fn check_max_render_type=
 )
 
 /*
+ * Scene production
+ * Check if the scene is set to production
+ */
+fn check_max_render_production=
+(
+   return renderers.renderDialogMode == #production
+)
+ 
+/*
+ * Pixel aspect
+ * Check if the pixel aspect ratio is set to 1.0
+ */
+fn check_max_render_pixel_aspect=
+(
+  return renderPixelAspect == 1.0
+)
+
+/*
  * Active camera
  * Check if the scene has an active camera
  */
-fn check_max_undefined_active_camera=
+fn check_max_camera_undefined=
 (
    return getActiveCamera() != undefined
 )
@@ -87,57 +106,21 @@ fn check_max_frame_nth=
 )
 
 /*
- * Output exists
- * Check if the output file exists
- */
-fn check_max_output_enabled=
-(
-	return rendSaveFile == true and rendOutputFilename != ""
-)
-
-/*
- * Units display type
- * Check if the units display type is set to the correct unit
- */
-fn check_max_units_display_type displayUnit=
-(
-   return units.DisplayType as string == displayUnit
-)
-
-/*
- * Units system type
- * Check if the units system type is set to the correct unit
- */
-fn check_max_units_system_type systemUnit=
-(
-   return units.SystemType as string == systemUnit
-)
-
-/*
- * Scene production
- * Check if the scene is set to production
- */
-fn check_max_scene_production=
-(
-   return renderers.renderDialogMode == #production
-)
-
-/*
- * Pixel aspect
- * Check if the pixel aspect ratio is set to 1.0
- */
- fn check_max_pixel_aspect=
- (
-   return renderPixelAspect == 1.0
- )
-
-/*
  * Frame rate
  * Check if the frame rate is set to right value
  */
 fn check_max_frame_rate fps=
 (
    return frameRate == fps
+)
+
+/*
+ * Output exists
+ * Check if the output file exists
+ */
+fn check_max_output_enabled=
+(
+	return rendSaveFile == true and rendOutputFilename != ""
 )
 
 /*
@@ -156,6 +139,24 @@ fn check_max_output_movieformat=
 fn check_max_output_isnetworkpath=
 (
    return pathIsNetworkPath rendOutputFilename
+)
+
+/*
+ * Units display type
+ * Check if the units display type is set to the correct unit
+ */
+fn check_max_scene_units_display_type displayUnit=
+(
+   return units.DisplayType as string == displayUnit
+)
+
+/*
+ * Units system type
+ * Check if the units system type is set to the correct unit
+ */
+fn check_max_scene_units_system_type systemUnit=
+(
+   return units.SystemType as string == systemUnit
 )
 
 

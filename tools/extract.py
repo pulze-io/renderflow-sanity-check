@@ -81,8 +81,8 @@ def parse_maxscript_file(filepath):
             "id": func_id,
             "name": name,
             "description": description,
-            "fn": fn_name,
-            "code": code_snippet
+            "check_fn": fn_name,
+            "check_code": code_snippet
         })
 
         func_id += 1
