@@ -27,6 +27,19 @@ fn check_max_filename_recover=
 )
 
 /*
+ * Max save_as fix
+ * Triggers the save_as dialog box
+ */
+fn fix_max_saves_as=
+(
+	local newFileName = getSaveFileName caption:"Save Scene As" types:"Max Files (*.max)|*.max"
+	if (newFileName != undefined) do
+	(
+		saveMaxFile newFileName
+	)
+)
+
+/*
  * Empty scene
  * Check if the scene is empty
  */
@@ -45,12 +58,30 @@ fn check_max_render_type=
 )
 
 /*
+ * Render type fix
+ * Stets the render type to view
+ */
+fn fix_max_render_type=
+(
+   setRenderType #view
+)
+
+/*
  * Scene production
  * Check if the scene is set to production
  */
 fn check_max_render_production=
 (
    return renderers.renderDialogMode == #production
+)
+
+/*
+ * Render prdocution fix
+ * Sets the render dialog mode to production
+ */
+fn fix_max_render_production=
+(
+   renderers.renderDialogMode = #production
 )
  
 /*
@@ -61,6 +92,15 @@ fn check_max_render_pixel_aspect=
 (
   return renderPixelAspect == 1.0
 )
+
+/*
+ * Pixel aspect fix
+ * Sets the pixel aspect ratio to 1.0
+ */
+ fn fix_max_render_pixel_aspect=
+ (
+    renderPixelAspect = 1.0
+ )
 
 /*
  * Active camera
@@ -78,6 +118,15 @@ fn check_max_camera_undefined=
 fn check_max_frame_single= 
 (
    return rendTimeType == 1
+)
+
+/*
+ * Single frame fix
+ * Sets the scene to single frame
+ */
+fn fix_max_frame_single=
+(
+   rendTimeType = 1
 )
 
 /*
@@ -165,7 +214,7 @@ fn check_max_scene_units_system_type systemUnit=
  */
 fn check_max_elements_count= 
 (
-   if not isArnold() do
+   if (not isArnold()) do
    (
      local re = maxOps.GetCurRenderElementMgr()
 
@@ -182,7 +231,7 @@ fn check_max_elements_count=
  */
 fn check_max_elements_active=
 (
-   if not isArnold() do
+   if (not isArnold()) do
    (
       local re = maxOps.GetCurRenderElementMgr()
       if re != undefined then
@@ -195,26 +244,66 @@ fn check_max_elements_active=
 )
 
 /*
+ * Fix elements active
+ * Activates all render elements
+ */
+fn fix_max_elements_active=
+(
+   if (not isArnold()) do
+   (
+      local re = maxOps.GetCurRenderElementMgr()
+      if re != undefined then
+      (
+         re.SetElementsActive true
+      )
+   )
+)
+
+/*
  * Vray distributed rendering 
  * Check if the Vray distributed rendering is disabled
  */
 fn check_max_vray_system_dr=
 (
-   if isVray() do
+   if (isVray()) do
    (
-      return renderers.current.system_distributedRender == false
+      return renderers.current.system_distributedRender != true
+   )
+)
+
+/*
+ * Fix Vray distributed rendering
+ * Enables Vray distributed rendering
+ */
+fn fix_max_vray_system_dr=
+(
+   if (isVray()) do
+   (
+      renderers.current.system_distributedRender = false
    )
 )
 
 /*
  * Vray frame stamp 
- * Checks if the Vray Frame Stamp is disabled
+ * Checks if the Vray frame stamp is disabled
  */
 fn check_max_vray_system_frame_stamp=
 (
-   if isVray() do
+   if (isVray()) do
    (
-      return renderers.current.system_frameStamp_on == false
+      return renderers.current.system_frameStamp_on != true
+   )
+)
+
+/*
+ * Fix Vray frame stamp
+ * Disables the Vray frame stamp
+ */
+fn fix_max_vray_system_frame_stamp=
+(
+   if (isVray()) do
+   (
+      renderers.current.system_frameStamp_on = false
    )
 )
 
@@ -224,21 +313,45 @@ fn check_max_vray_system_frame_stamp=
  */
 fn check_max_vray_render_mask=
 (
-   if isVray() do
+   if (isVray()) do
    (
       return renderers.current.imageSampler_renderMask_type == 0
    )
 )
 
 /*
- * Vray Material override (Material)
- * Check if material override has a no material assigned
+ * Fix Vray render mask
+ * Disables the Vray render mask
  */
-fn check_max_vray_override_disabled=
+fn fix_max_vray_render_mask=
 (
-   if isVray() do
+   if (isVray()) do
    (
-      renderers.current.options_overrideMtl_mtl == undefined
+      renderers.current.imageSampler_renderMask_type = 0
+   )
+)
+
+/*
+ * Vray Material override 
+ * Check if material override is enabled
+ */
+ fn check_max_vray_override_disabled=
+ (
+    if (isVray()) do
+    (
+       return renderers.current.options_overrideMtl_on == false
+    )
+ )
+
+/*
+ * Fix Vray material override
+ * Disables the Vray material override
+ */
+fn fix_max_vray_override_disable=
+(
+   if (isVray()) do
+   (
+      return renderers.current.options_overrideMtl_on = false
    )
 )
 
@@ -248,21 +361,21 @@ fn check_max_vray_override_disabled=
  */
 fn check_max_vray_hidden_lights=
 (
-   if isVray() do
+   if (isVray()) do
    (
       return renderers.current.options_hiddenLights == false
    )
 )
 
 /*
- * Corona distributed rendering
- * Check if the Corona distributed rendering is disabled
+ * Fix Vray hidden lights
+ * Disables the render hidden lights feature
  */
-fn check_max_corona_system_dr=
+fn fix_max_vray_hidden_lights=
 (
-   if isCorona() do
+   if (isVray()) do
    (
-      return renderers.current.dr_enable == false
+      renderers.current.options_hiddenLights = false
    )
 )
 
@@ -272,7 +385,7 @@ fn check_max_corona_system_dr=
  */
 fn check_max_vray_vfb_region=
 (
-   if isVray() do
+   if (isVray()) do
    (
       deepEqual (vfbControl #getregion) #(#(0,0,0,0))
    )
@@ -285,7 +398,7 @@ fn check_max_vray_vfb_region=
 
 fn check_max_vray_vfb_mousetrack=
 (
-   if isVray() do
+   if (isVray()) do
    (
       item = vfbControl #trackmouse
       found = findItem item 0
@@ -297,14 +410,74 @@ fn check_max_vray_vfb_mousetrack=
 )
 
 /*
+ * Corona distributed rendering
+ * Check if the Corona distributed rendering is disabled
+ */
+fn check_max_corona_system_dr=
+(
+   if (isCorona()) do
+   (
+      return renderers.current.dr_enable == false
+   )
+)
+
+/*
+ * Fix Corona distributed rendering
+ * Disables the Corona distributed rendering
+ */
+fn fix_max_corona_system_dr=
+(
+   if (isCorona()) do
+   (
+      renderers.current.dr_enable = false
+   )
+)
+
+/*
  * Corona distributed rendering search LAN
  * Check if the Corona distributed rendering (search Lan) is disabled
  */
 fn check_max_corona_system_dr_searchlan=
 (
-   if isCorona() do
+   if (isCorona()) do
    (
       return renderers.current.dr_searchDuringRender == false
+   )
+)
+
+/*
+ * Fix Corona distributed rendering search LAN
+ * Disables the Corona distributed rendering (search Lan)
+ */
+fn fix_max_corona_system_dr_searchlan=
+(
+   if (isCorona()) do
+   (
+      renderers.current.dr_searchDuringRender = false
+   )
+)
+
+/*
+ * Corona render selected
+ * Checks if Corona render selected is disabled
+ */
+fn check_max_corona_render_selected=
+(
+   if (isCorona()) do
+   (
+      return renderers.current.renderSelected_mode == 0
+   )
+)
+
+/*
+ * Fix Corona render selected
+ * Disables the Corona render selected
+ */
+fn fix_max_corona_render_selected=
+(
+   if (isCorona()) do
+   (
+      renderers.current.renderSelected_mode = 0
    )
 )
 
@@ -314,10 +487,19 @@ fn check_max_corona_system_dr_searchlan=
  */
 fn check_max_corona_override_disabled=
 (
-   if isCorona() do
+   if (isCorona()) do
    (
       return renderers.current.mtlOverride_enabled == false
    )
+)
+
+/*
+ * Fix Corona material override
+ * Disables Corona material override
+ */
+fn fix_max_corona_material_override=
+(
+   renderers.current.mtlOverride_enabled = false
 )
 
 /*
@@ -326,7 +508,7 @@ fn check_max_corona_override_disabled=
  */
 fn check_max_corona_override_material_none=
 (
-   if isCorona() do
+   if (isCorona()) do
    (
       return renderers.current.mtlOverride == undefined
    )
@@ -338,7 +520,7 @@ fn check_max_corona_override_material_none=
  */
 fn check_max_corona_infinite_render=
 (
-   if isCorona() do
+   if (isCorona()) do
    (
       return (
 		      renderers.current.progressive_passLimit != 0 and 
@@ -349,18 +531,64 @@ fn check_max_corona_infinite_render=
 )
 
 /*
+ * Corona render stamp
+ * Checks if Corona render stamp is disabled
+ */
+fn check_max_corona_render_stamp=
+(
+   if (isCorona()) do
+   (
+      return renderers.current.renderstamp_use
+   )
+)
+
+/*
+ * Fix Corona render stamp
+ * Disables the Corona render stamp
+ */
+fn fix_max_corona_render_stamp=
+(
+   if (isCorona()) do
+   (
+      renderers.current.renderstamp_use = false
+   )
+)
+
+/*
  * Corona vfb region
  * Checks if Corona vfb region is disabled
  */
 fn check_max_corona_vfb_region=
 (
-   if isCorona() do
+   if (isCorona()) do
    (
       renderers.current.system_vfbRegions.count == 3
    )
 )
  
+/*
+ * FStorm render mask
+ * Checks if FStorm render masks are disabled
+ */
+fn check_max_fstorm_render_mask=
+(
+   if (isFStorm()) do
+   (
+      return renderers.current.rendermask_on == false
+   )
+)
 
+/*
+ * FStorm override
+ * Checks if Fstorm override is disabled
+ */
+ fn check_max_fstorm_override=
+ (
+    if (isFStorm()) do
+    (
+       return renderers.current.gray_material_mode == false
+    )
+ )
 
 
 -- output_exists 
@@ -369,7 +597,4 @@ fn check_max_corona_vfb_region=
 -- missing_plugins
 -- assets_exists
 -- assets_unc_path
-
-
-
 
