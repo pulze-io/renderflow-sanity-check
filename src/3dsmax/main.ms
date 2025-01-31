@@ -97,10 +97,10 @@ fn check_max_render_pixel_aspect=
  * Pixel aspect fix
  * Sets the pixel aspect ratio to 1.0
  */
- fn fix_max_render_pixel_aspect=
- (
-    renderPixelAspect = 1.0
- )
+fn fix_max_render_pixel_aspect=
+(
+   renderPixelAspect = 1.0
+)
 
 /*
  * Active camera
@@ -260,6 +260,16 @@ fn fix_max_elements_active=
 )
 
 /*
+ * Objects without materials
+ * Selects all objects that have no materials assigned
+ */
+fn check_max_objects_without_materials=
+(
+   objectsNoMaterial = for obj in objects where obj.material == undefined collect obj
+   select objectsNoMaterial
+)
+
+/*
  * Vray distributed rendering 
  * Check if the Vray distributed rendering is disabled
  */
@@ -308,7 +318,7 @@ fn fix_max_vray_system_frame_stamp=
 )
 
 /*
- * Vray mask value
+ * Vray mask
  * Checks if vray render mask are disabled
  */
 fn check_max_vray_render_mask=
@@ -599,29 +609,11 @@ fn check_max_vray_vfb_region=
  * Vray vfb mousetrack
  * Checks if Vray vfb mousetrack is disabled
  */
-
 fn check_max_vray_vfb_mousetrack=
 (
-   if (isVray()) do
+   if (isVray()) then 
    (
-      item = vfbControl #trackmouse
-      found = findItem item 0
-      if found == 1 then
-         return true
-      else
-         return false
-   )
-)
-
-/*
- * Corona distributed rendering
- * Check if the Corona distributed rendering is disabled
- */
-fn check_max_corona_system_dr=
-(
-   if (isCorona()) do
-   (
-      return renderers.current.dr_enable == false
+      findItem (vfbControl #trackmouse) 0 == 1
    )
 )
 
@@ -636,6 +628,19 @@ fn check_max_corona_system_dr=
        return renderers.current.output_resumableRendering == false
     )
  )
+
+/*
+ * Corona distributed rendering
+ * Check if the Corona distributed rendering is disabled
+ */
+fn check_max_corona_system_dr=
+(
+   if (isCorona()) do
+   (
+      return renderers.current.dr_enable == false
+   )
+)
+
 
 /*
  * Fix Corona distributed rendering
@@ -713,7 +718,7 @@ fn check_max_corona_override_disabled=
  * Fix Corona material override
  * Disables Corona material override
  */
-fn fix_max_corona_material_override=
+fn fix_max_corona_override=
 (
    renderers.current.mtlOverride_enabled = false
 )
@@ -805,6 +810,13 @@ fn check_max_fstorm_render_mask=
        return renderers.current.gray_material_mode == false
     )
  )
+
+
+
+/*
+ * Objects without materials
+ * Checks if there are objects without materials
+ */
 
 
 -- output_exists 
