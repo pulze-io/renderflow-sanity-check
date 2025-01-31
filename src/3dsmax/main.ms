@@ -332,6 +332,102 @@ fn fix_max_vray_render_mask=
 )
 
 /*
+ * Vray min shading rate
+ * Checks if the Vray min shading rate is matching
+ */
+fn check_max_vray_min_shading_rate arg=
+(
+   if (isVray()) do
+   (
+      return renderers.current.imageSampler_shadingRate == arg
+   )
+)
+
+/*
+ * Fix Vray min shading rate
+ * Sets the Vray min shading rate
+ */
+fn fix_max_vray_min_shading_rate arg=
+(
+   if (isVray()) do
+   (
+      renderers.current.imageSampler_shadingRate = arg
+   )
+)
+
+/*
+ * Vray min subdivs
+ * Checks if the Vray min subdivs is matching
+ */
+fn check_max_vray_min_subdivs arg=
+(
+   if (isVray()) do
+   (
+      return renderers.current.progressive_minSamples == arg
+   )
+)
+
+/*
+ * Fix Vray min subdivs
+ * Sets the Vray min subdivs
+ */
+fn fix_max_vray_min_subdivs arg=
+(
+   if (isVray()) do
+   (
+      renderers.current.progressive_minSamples = arg
+   )
+)
+
+/*
+ * Vray max subdivs
+ * Checks if the Vray max subdivs is matching
+ */
+fn check_max_vray_max_subdivs arg=
+(
+   if (isVray()) do
+   (
+      return renderers.current.progressive_maxSamples == arg
+   )
+)
+
+/*
+ * Fix Vray max subdivs
+ * Sets the Vray max subdivs
+ */
+fn fix_max_vray_max_subdivs arg=
+(
+   if (isVray()) do
+   (
+      renderers.current.progressive_maxSamples = arg
+   )
+)
+
+/*
+ * Vray noise threshold
+ * Checks if the Vray noise threshold is matching
+ */
+fn check_max_vray_noise_threshold arg=
+(
+   if (isVray()) do
+   (
+      return renderers.current.progressive_noise_threshold == arg
+   )
+)
+
+/*
+ * Fix Vray noise threshold
+ * Sets the Vray noise threshold
+ */
+fn fix_max_vray_noise_threshold arg=
+(
+   if (isVray()) do
+   (
+      renderers.current.progressive_noise_threshold = arg
+   )
+)
+
+/*
  * Vray Material override 
  * Check if material override is enabled
  */
@@ -380,6 +476,114 @@ fn fix_max_vray_hidden_lights=
 )
 
 /*
+ * Vray save raw file
+ * Checks if Vray save raw file is enabled
+ */
+fn check_max_vray_saveRawFile=
+(
+   if (isVray()) do
+   (
+      return renderers.current.output_saveRawFile == true
+   )
+)
+
+/*
+ * Vray raw filename
+ * Checks if the Vray raw filename is empty
+ */
+fn check_max_vray_rawFileName=
+(
+   if (isVray()) do
+   (
+      return renderers.current.output_rawFileName != ""
+   )
+)
+
+/*
+ * Vray seperate render channels
+ * Checks if Vray separate render channels is enabled
+ */
+fn check_max_vray_separateChannels=
+(
+   if (isVray()) do
+   (
+      return renderers.current.output_splitgbuffer == true
+   )
+)
+
+/*
+ * Vray seperate folders
+ * Checks if Vray separate folders is enabled
+ */
+fn check_max_vray_separateFolders=
+(
+   if (isVray()) do
+   (
+      return return renderers.current.output_separateFolders == true
+   )
+)
+
+/*
+ * Vray render channels filename
+ * Checks if the Vray render channels filename is not empty
+ */
+fn check_max_vray_renderChannelsFileName=
+(
+   if (isVray()) do
+   (
+      return renderers.current.output_splitfilename != ""
+   )
+)
+
+/*
+ * Vray render channels rgb
+ * Checks if the Vray render channels rgb is enabled
+ */
+fn check_max_vray_renderChannelsRGB=
+(
+   if (isVray()) do
+   (
+      return renderers.current.output_splitRGB == true
+   )
+)
+
+/*
+ * Vray render channels alpha
+ * Checks if the Vray render channels alpha is enabled
+ */
+fn check_max_vray_renderChannelsAlpha=
+(
+   if (isVray()) do
+   (
+      return renderers.current.output_splitAlpha == true
+   )
+
+)
+/*
+ * Vray save vfb corrections
+ * Checks if VFB color corrections are applied to the render elements
+ */
+fn check_max_vray_saveVfbCorrections=
+(
+   if (isVray()) do
+   (
+      return renderers.current.output_correctChannels == true
+   )
+)
+
+/*
+ * Vray clear previous render
+ * Checks if the Vray clear previous render is enabled
+ */
+fn check_max_vray_clearPreviousRender=
+(
+   if (isVray()) do
+   (
+      return renderers.current.system_previousRender == 5
+   )
+)
+ 
+/*
  * Vray vfb region
  * Check if the Vray VFB region is disabled
  */
@@ -420,6 +624,18 @@ fn check_max_corona_system_dr=
       return renderers.current.dr_enable == false
    )
 )
+
+/*
+ * Vray resumable rendering
+ * Check if the Vray resumable rendering is disabled
+ */
+ fn check_max_vray_resumable_render=
+ (
+    if (isVray()) do
+    (
+       return renderers.current.output_resumableRendering == false
+    )
+ )
 
 /*
  * Fix Corona distributed rendering
