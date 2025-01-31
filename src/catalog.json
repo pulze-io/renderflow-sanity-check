@@ -3,10 +3,16 @@
         "id": "max_filename_untitled",
         "name": "Untitled filename",
         "description": "What does this check do?",
+        "host": "3dsmax",
+        "enabled": true,
+        "collection": ["default"],
+        "author": "Pulze",
+        "language": "maxscript",
         "level": "critical",
         "message": "Warning message, if the check fails",
         "check_fn": "check_max_filename_untitled",
         "check_args": [],
-        "fix_fn": "fix_max_filename"
+        "fix_fn": "fix_max_filename",
+        "fix_args": []
     }
 ]
