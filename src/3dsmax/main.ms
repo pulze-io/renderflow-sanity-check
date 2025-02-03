@@ -67,7 +67,7 @@ fn fix_max_renderType=
 )
 
 /*
- * Scene production
+ * Render production
  * Check if the scene is set to production
  */
 fn check_max_renderProduction=
@@ -263,8 +263,19 @@ fn fix_max_elementsActive=
  * Objects without materials
  * Selects all objects that have no materials assigned
  */
+fn check_max_objects_noMaterials =
+(
+   local objectsNoMaterial = for obj in objects where obj.material == undefined collect obj
+   return objectsNoMaterial.count == 0
+)
+
+/*
+ * Fix Objects without materials
+ * Selects all objects that have no materials assigned
+ */
 fn check_max_objects_noMaterials=
 (
+   clearSelection()	
    local objectsNoMaterial = for obj in objects where obj.material == undefined collect obj
    select objectsNoMaterial
 )
