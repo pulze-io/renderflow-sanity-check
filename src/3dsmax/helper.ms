@@ -36,5 +36,3 @@ fn isArnold=
 (
     return findString (classOf renderers.current as string) "Arnold" != undefined
 )
-
-
