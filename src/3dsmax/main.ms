@@ -263,7 +263,7 @@ fn fix_max_elementsActive=
  * Objects without materials
  * Selects all objects that have no materials assigned
  */
-fn check_max_objects_noMaterials =
+fn check_max_objects_noMaterials=
 (
    local objectsNoMaterial = for obj in objects where obj.material == undefined collect obj
    return objectsNoMaterial.count == 0
@@ -273,7 +273,7 @@ fn check_max_objects_noMaterials =
  * Fix Objects without materials
  * Selects all objects that have no materials assigned
  */
-fn check_max_objects_noMaterials=
+fn fix_max_objects_noMaterials=
 (
    clearSelection()	
    local objectsNoMaterial = for obj in objects where obj.material == undefined collect obj
@@ -564,7 +564,7 @@ fn check_max_vray_renderChannelsRGB=
 (
    if (isVray()) do
    (
-      return renderers.current.output_splitRGB == true
+      return (renderers.current.output_splitRGB == true)
    )
 )
 
@@ -755,8 +755,8 @@ fn check_max_corona_infiniteRender=
    if (isCorona()) do
    (
       return (
-		      renderers.current.progressive_passLimit != 0 and 
-		      renderers.current.progressive_timeLimit != 0 and
+		      renderers.current.progressive_passLimit != 0 or
+		      renderers.current.progressive_timeLimit != 0 or
 			   renderers.current.adaptivity_targetError != 0.0
 		   )
    )
@@ -770,7 +770,7 @@ fn check_max_corona_renderStamp=
 (
    if (isCorona()) do
    (
-      return renderers.current.renderstamp_use
+      return renderers.current.renderstamp_use == false
    )
 )
 
@@ -794,6 +794,7 @@ fn check_max_corona_vfbRegion=
 (
    if (isCorona()) do
    (
+      renderers.current.system_vfbRegions.count == 0 or
       renderers.current.system_vfbRegions.count == 3
    )
 )

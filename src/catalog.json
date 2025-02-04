@@ -130,7 +130,7 @@
     },
     {
         "id": "max_frameSingle",
-        "name": "Single Frame",
+        "name": "Single frame",
         "description": "Checks if the scene is set to render a single frame",
         "host": "3dsmax",
         "enabled": true,
@@ -338,7 +338,7 @@
     },
     {
         "id": "max_vray_frameStamp",
-        "name": "Vray frame stamp",
+        "name": "Vray framestamp",
         "description": "Checks if the Vray frame stamp is disabled",
         "host": "3dsmax",
         "enabled": true,
@@ -354,7 +354,7 @@
     },    
     {
         "id": "max_vray_renderMask",
-        "name": "Vray mask",
+        "name": "Vray rendermask",
         "description": "Checks if vray render masks are disabled",
         "host": "3dsmax",
         "enabled": true,
@@ -434,7 +434,7 @@
     },    
     {
         "id": "max_vray_overrideDisabled",
-        "name": "Vray Material override",
+        "name": "Vray material override",
         "description": "Checks if material override is enabled",
         "host": "3dsmax",
         "enabled": true,
@@ -674,7 +674,7 @@
     },    
     {
         "id": "max_corona_systemDrSearchlan",
-        "name": "Corona distributed rendering search LAN",
+        "name": "Corona distributed rendering search lan",
         "description": "Checks if the Corona distributed rendering (search Lan) is disabled",
         "host": "3dsmax",
         "enabled": true,
@@ -722,7 +722,7 @@
     },
     {
         "id": "max_corona_overrideNoMaterial",
-        "name": "Corona material override (Material)",
+        "name": "Corona material override (material)",
         "description": "Checks if material override has a no material assigned",
         "host": "3dsmax",
         "enabled": true,
