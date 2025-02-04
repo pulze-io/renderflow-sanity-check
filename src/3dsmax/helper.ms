@@ -2,6 +2,11 @@
  * Helper functions
  */
 
+struct SanityCheckResult (
+    id,
+    success
+)
+
 fn isVray=
 (
     return findString (classOf renderers.current as string) "V_Ray" != undefined
@@ -21,3 +26,5 @@ fn isArnold=
 (
     return findString (classOf renderers.current as string) "Arnold" != undefined
 )
+
+ 
