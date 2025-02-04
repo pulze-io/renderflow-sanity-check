@@ -753,11 +753,7 @@ fn check_max_corona_infiniteRender=
 (
    if (isCorona()) do
    (
-      return (
-		      renderers.current.progressive_passLimit != 0 or
-		      renderers.current.progressive_timeLimit != 0 or
-			   renderers.current.adaptivity_targetError != 0.0
-		   )
+      return (renderers.current.progressive_passLimit != 0 or renderers.current.progressive_timeLimit != 0 or renderers.current.adaptivity_targetError != 0.0)
    )
 )
 
@@ -793,8 +789,7 @@ fn check_max_corona_vfbRegion=
 (
    if (isCorona()) do
    (
-      renderers.current.system_vfbRegions.count == 0 or
-      renderers.current.system_vfbRegions.count == 3
+      return (renderers.current.system_vfbRegions.count == 0 or renderers.current.system_vfbRegions.count == 3)
    )
 )
  
