@@ -8,6 +8,19 @@ fn check_max_filenameUntitled=
 )
 
 /*
+ * Max saveAs fix
+ * Triggers the save_as dialog box
+ */
+fn fix_max_filenameUntitled=
+(
+   local newFileName = getSaveFileName caption:"Save Scene As" types:"Max Files (*.max)|*.max"
+   if (newFileName != undefined) do
+   (
+      saveMaxFile newFileName
+   )
+)
+
+/*
  * Autoback filename
  * Check if the filename contains the word "autoback"
  */
@@ -23,19 +36,6 @@ fn check_max_filenameAutoback=
 fn check_max_filenameRecover=
 (
    return findString maxfilename "recover" == undefined
-)
-
-/*
- * Max saveAs fix
- * Triggers the save_as dialog box
- */
-fn fix_max_saveAs=
-(
-	local newFileName = getSaveFileName caption:"Save Scene As" types:"Max Files (*.max)|*.max"
-	if (newFileName != undefined) do
-	(
-		saveMaxFile newFileName
-	)
 )
 
 /*

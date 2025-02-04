@@ -14,7 +14,7 @@
         "message": "Name your file!",
         "check_fn": "check_max_filenameUntitled",
         "check_args": [],
-        "fix_fn": "fix_max_savesAs",
+        "fix_fn": "fix_max_filenameUntitled",
         "fix_args": []
     },
     {
@@ -32,7 +32,7 @@
         "message": "Save your file",
         "check_fn": "check_max_filenameAutoback",
         "check_args": [],
-        "fix_fn": "fix_max_savesAs",
+        "fix_fn": "",
         "fix_args": []
     },
     {
@@ -50,7 +50,7 @@
         "message": "Save your file",
         "check_fn": "check_max_filenameRecover",
         "check_args": [],
-        "fix_fn": "fix_max_saveAs",
+        "fix_fn": "",
         "fix_args": []
     },
     {
