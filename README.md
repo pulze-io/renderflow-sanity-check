@@ -10,11 +10,10 @@ RenderFlow is a network rendering and automation tool for 3D artist.
 
 This repository contains the scripts that are used to detect various errors in 3ds Max, Blender, Cinema 4D and other products before submitting a job for network rendering.
 
-Read more and try out RenderFlow [here](https://www.pulze.io/products/render-flow).
+You can read more and try RenderFlow [here](https://www.pulze.io/products/render-flow).
 
 ## Getting Started
-...
-
+For 3ds Max the `main.ms` contains all the core logic. Functions starting with `check_` are the checks and functions starting with `fix_` are the fixes. Check function will always return a boolean value, `true` if the check passes and `false` if the check fails. The fix function (where available) will attempt to fix the issue, usually by updating a simple value or it tries to help the user by opening a certain dialog, or selecting the required object.
 
 ## Naming Convention
 

@@ -1,7 +1,6 @@
 /*
  * Untitled filename
  * Check if the filename is empty (untitled)
- * Save your file before submitting
  */
 fn check_max_filenameUntitled=
 (
@@ -846,11 +845,3 @@ fn fix_max_fstorm_overrideDisabled=
 		renderers.current.gray_material_mode = false
 	)
 )
-
--- output_exists 
--- elements_duplicate ### if not arnold
-
--- missing_plugins
--- assets_exists
--- assets_unc_path
-

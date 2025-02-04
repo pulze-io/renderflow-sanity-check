@@ -1,22 +1,26 @@
+/*
+ * Unit test for each check and fic function
+ */
+
 fn test=
 (
-	fileIn "helper.ms"
-	fileIn "main.ms"
+	fileIn "helper.ms" -- include helpers
+	fileIn "main.ms" -- include check and fix functions
 	
 	-- Untitled filename
 	resetMaxFile #noPrompt
 	assert (check_max_filenameUntitled() == false)
 
 	-- Autoback filename
-	saveMaxFile "P:\projects\043_RF_Sanitycheck\model\AutoBackup.max" 
+	saveMaxFile @"P:\projects\043_RF_Sanitycheck\model\AutoBackup.max" 
 	assert (check_max_filenameAutoback() == false)
-	saveMaxFile "P:\projects\043_RF_Sanitycheck\model\\testfile.max"
+	saveMaxFile @"P:\projects\043_RF_Sanitycheck\model\testfile.max"
 	assert (check_max_filenameAutoback() == true)
 
 	-- Recover filename
-	saveMaxFile "P:\projects\043_RF_Sanitycheck\model\\testfile_recover.max"
+	saveMaxFile @"P:\projects\043_RF_Sanitycheck\model\testfile_recover.max"
 	assert (check_max_filenameRecover() == false)
-	saveMaxFile "P:\projects\043_RF_Sanitycheck\model\\testfile.max"
+	saveMaxFile @"P:\projects\043_RF_Sanitycheck\model\testfile.max"
 	assert (check_max_filenameRecover() == true)
 
 	-- Empty scene
@@ -68,17 +72,17 @@ fn test=
 
 	-- Output exists / Output movie format
 	rendSaveFile = true
-	rendOutputFilename = "P:\projects\043_RF_Sanitycheck\comp\renderoutput\test_file.png"
+	rendOutputFilename = @"P:\projects\043_RF_Sanitycheck\comp\renderoutput\test_file.png"
 	assert (check_max_outputEnabled() == true)
-	rendOutputFilename = "P:\projects\043_RF_Sanitycheck\comp\renderoutput\test_file.avi"
+	rendOutputFilename = @"P:\projects\043_RF_Sanitycheck\comp\renderoutput\test_file.avi"
 	assert (check_max_output_movieFormat() == false)
-	rendOutputFilename = "P:\projects\043_RF_Sanitycheck\comp\renderoutput\test_file.png"
+	rendOutputFilename = @"P:\projects\043_RF_Sanitycheck\comp\renderoutput\test_file.png"
 	assert(check_max_output_movieFormat() == true)
 
 	-- Network path
-	rendOutputFilename = "C:\Users\pulze\Desktop\test\test_file.png"
+	rendOutputFilename = @"C:\Users\pulze\Desktop\test\test_file.png"
 	assert (check_max_output_isNetworkpath() == false)
-	rendOutputFilename = "P:\projects\043_RF_Sanitycheck\comp\renderoutput\test_file.png"
+	rendOutputFilename = @"P:\projects\043_RF_Sanitycheck\comp\renderoutput\test_file.png"
 	assert (check_max_output_isNetworkpath() == true)
 
 	-- Units display type   
@@ -185,7 +189,7 @@ fn test=
 	-- Vray raw filename
 	renderers.current.output_rawFileName = ""
 	assert (check_max_vray_rawFileName() == false)
-	renderers.current.output_rawFileName = "P:\projects\043_RF_Sanitycheck\comp\\renderoutput\\test.exr"
+	renderers.current.output_rawFileName = @"P:\projects\043_RF_Sanitycheck\comp\renderoutput\test.exr"
 	assert (check_max_vray_rawFileName() == true)
 
 	-- Vray seperate render channels
@@ -203,7 +207,7 @@ fn test=
 	-- Vray render channels filename
 	renderers.current.output_splitfilename = ""
 	assert (check_max_vray_renderChannelsName() == false)
-	renderers.current.output_splitfilename = "P:\projects\043_RF_Sanitycheck\comp\\renderoutput\\test.png"
+	renderers.current.output_splitfilename = @"P:\projects\043_RF_Sanitycheck\comp\renderoutput\test.png"
 	assert (check_max_vray_renderChannelsName() == true)
 
 	-- Vray render channels rgb                                

@@ -1,21 +1,6 @@
 /*
- * Additional helper functions for the sanity checks
+ * Helper functions
  */
-
--- isVray
--- isCorona
--- isFStorm
--- getMaxVersion
-
-fn openSaveDialog=
-(
-    --
-)
-
-fn getAllObjects=
-(
-    --
-)
 
 fn isVray=
 (

@@ -27,10 +27,7 @@ def parse_maxscript_file(filepath):
     Reads a file from 'filepath' and returns a list of parsed results in the form:
     [
         {
-            "id": <int>,
-            "name": <str>,
-            "description": <str>,
-            "fn": <str>,
+            "id": <str>,
             "code": <str>
         },
         ...
@@ -41,27 +38,22 @@ def parse_maxscript_file(filepath):
         content = f.read()
 
     # Regex to capture:
-    # 1) Two lines from the block comment
-    # 2) Function name right up to the opening '('
+    # 1) Function name right up to the opening '('
     # (We stop before '(' so we can do a balanced parentheses match ourselves.)
     pattern = re.compile(
-        r'/\*\s*\*\s*(.*?)\s*\*\s*(.*?)\s*\*/'  # 2 lines in the comment
-        r'\s*fn\s+(\w+)\s*=\s*\(',               # capture function name
+        r'\s*fn\s+(\w+)\s*=\s*\(',  # capture function name
         re.DOTALL
     )
 
     results = []
     search_pos = 0
-    func_id = 1
 
     while True:
         match = pattern.search(content, search_pos)
         if not match:
             break
 
-        name = match.group(1).strip()         # first comment line
-        description = match.group(2).strip()  # second comment line
-        fn_name = match.group(3).strip()      # function name
+        fn_name = match.group(1).strip()  # function name
 
         # Index of the '(' right after the function name
         open_paren_index = match.end() - 1
@@ -73,19 +65,18 @@ def parse_maxscript_file(filepath):
             search_pos = match.end()
             continue
 
-        snippet_start = match.start()             # where the comment starts
+        snippet_start = match.start()             # where the function starts
         snippet_end = close_paren_index + 1       # one past the matching ')'
         code_snippet = content[snippet_start:snippet_end].strip()
 
+        # Generate the id based on the function name
+        func_id = fn_name.replace('fn ', '')
+
         results.append({
             "id": func_id,
-            "name": name,
-            "description": description,
-            "check_fn": fn_name,
-            "check_code": code_snippet
+            "code": code_snippet
         })
 
-        func_id += 1
         search_pos = snippet_end  # move on
 
     return results
