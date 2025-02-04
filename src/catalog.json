@@ -1,12 +1,13 @@
 [
-
     {
         "id": "max_filenameUntitled",
         "name": "Untitled filename",
         "description": "Checks if the filename is empty (untitled)",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "critical",
@@ -22,7 +23,9 @@
         "description": "Checks if the filename contains the word 'autoback'",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "warning",
@@ -38,7 +41,9 @@
         "description": "Check if the filename contains the word 'recover'",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "warning",
@@ -54,7 +59,9 @@
         "description": "Checks if the scene has objects",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "critical",
@@ -70,7 +77,9 @@
         "description": "Checks if the render type is set to #view",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "critical",
@@ -86,7 +95,9 @@
         "description": "Checks if the scene is set to production",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "critical",
@@ -102,7 +113,9 @@
         "description": "Checks if the pixel aspect ratio is set to 1.0",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "critical",
@@ -118,7 +131,9 @@
         "description": "Checks if the scene has an active camera",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "critical",
@@ -134,7 +149,9 @@
         "description": "Checks if the scene is set to render a single frame",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "warning",
@@ -150,7 +167,9 @@
         "description": "Checks if the scene is set to render a frame range",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "warning",
@@ -166,7 +185,9 @@
         "description": "Checks if the scene is set to 'render every Nth frame'",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "warning",
@@ -182,13 +203,17 @@
         "description": "Checks if the frame rate is set to right value",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "critical",
         "message": "Your FPS settings don't match",
         "check_fn": "check_max_frameRate",
-        "check_args": ["arg"],
+        "check_args": [
+            "arg"
+        ],
         "fix_fn": "",
         "fix_args": []
     },
@@ -198,7 +223,9 @@
         "description": "Checks if the output path is set in the render settings",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "critical",
@@ -214,7 +241,9 @@
         "description": "Checks if the output file format is set to a movie format",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "critical",
@@ -230,7 +259,9 @@
         "description": "Checks if the output path is a network path",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "warning",
@@ -246,13 +277,17 @@
         "description": "Checks if the units display type is set to the correct unit",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "critical",
         "message": "Set the display unit to the correct unit",
         "check_fn": "check_max_scene_displayUnit",
-        "check_args": ["arg"],
+        "check_args": [
+            "arg"
+        ],
         "fix_fn": "",
         "fix_args": []
     },
@@ -262,13 +297,17 @@
         "description": "Checks if the units system type is set to the correct unit",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "critical",
         "message": "Set the system unit to the correct unit",
         "check_fn": "check_max_scene_systemUnit",
-        "check_args": ["arg"],
+        "check_args": [
+            "arg"
+        ],
         "fix_fn": "",
         "fix_args": []
     },
@@ -278,7 +317,9 @@
         "description": "Checks if the scene has render elements (AOVs excluded)",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "warning",
@@ -294,7 +335,9 @@
         "description": "Checks if the render elements are active in the scene",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "critical",
@@ -310,7 +353,9 @@
         "description": "Checks if there are objects that have no material assigned to them (selects them)",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "warning",
@@ -326,7 +371,9 @@
         "description": "Checks if vray distributed rendering is enabled in the scene",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "critical",
@@ -342,7 +389,9 @@
         "description": "Checks if the Vray frame stamp is disabled",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "warning",
@@ -351,14 +400,16 @@
         "check_args": [],
         "fix_fn": "fix_max_vray_frameStamp",
         "fix_args": []
-    },    
+    },
     {
         "id": "max_vray_renderMask",
         "name": "Vray rendermask",
         "description": "Checks if vray render masks are disabled",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "critical",
@@ -367,78 +418,104 @@
         "check_args": [],
         "fix_fn": "fix_max_vray_renderMask",
         "fix_args": []
-    },    
+    },
     {
         "id": "max_vray_minShadingRate",
         "name": "Vray min shading rate",
         "description": "Checks if the Vray min shading rate is set to the right value",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "warning",
         "message": "The min shading rate doesn't match the specific value",
         "check_fn": "check_max_vray_minShadingRate",
-        "check_args": ["arg"],
+        "check_args": [
+            "arg"
+        ],
         "fix_fn": "fix_max_vray_minShadingRate",
-        "fix_args": ["arg"]
-    },    
+        "fix_args": [
+            "arg"
+        ]
+    },
     {
         "id": "max_vray_minSubdivs",
         "name": "Vray min subdivs",
         "description": "Checks if the Vray min subdivs is set to the right value",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "warning",
         "message": "The min subdivs doesn't match the specific value",
         "check_fn": "check_max_vray_minSubdivs",
-        "check_args": ["arg"],
+        "check_args": [
+            "arg"
+        ],
         "fix_fn": "fix_max_vray_minSubdivs",
-        "fix_args": ["arg"]
-    },    
+        "fix_args": [
+            "arg"
+        ]
+    },
     {
         "id": "max_vray_maxSubdivs",
         "name": "Vray max subdivs",
         "description": "Checks if the Vray max subdivs is set to the right value",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "warning",
         "message": "The max subdivs doesn't match the specific value",
         "check_fn": "check_max_vray_maxSubdivs",
-        "check_args": ["arg"],
+        "check_args": [
+            "arg"
+        ],
         "fix_fn": "fix_max_vray_maxSubdivs",
-        "fix_args": ["arg"]
-    },    
+        "fix_args": [
+            "arg"
+        ]
+    },
     {
         "id": "max_vray_noiseThreshold",
         "name": "Vray noise threshold",
         "description": "Checks if the Vray noise threshold is matching the specific value",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "critical",
         "message": "Checks if the Vray noise threshold is matching the specific value",
         "check_fn": "check_max_vray_noiseThreshold",
-        "check_args": ["arg"],
+        "check_args": [
+            "arg"
+        ],
         "fix_fn": "fix_max_vray_noiseThreshold",
-        "fix_args": ["arg"]
-    },    
+        "fix_args": [
+            "arg"
+        ]
+    },
     {
         "id": "max_vray_overrideDisabled",
         "name": "Vray material override",
         "description": "Checks if material override is enabled",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "critical",
@@ -447,14 +524,16 @@
         "check_args": [],
         "fix_fn": "fix_max_vray_overrideDisabled",
         "fix_args": []
-    },    
+    },
     {
         "id": "max_vray_hiddenLights",
         "name": "Vray hidden lights",
         "description": "Checks if render hidden lights feature is disabled",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "critical",
@@ -463,14 +542,16 @@
         "check_args": [],
         "fix_fn": "fix_max_vray_hiddenLights",
         "fix_args": []
-    },    
+    },
     {
         "id": "max_vray_saveRawFile",
         "name": "Vray save raw file",
         "description": "Checks if Vray save raw file is enabled",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "warning",
@@ -479,14 +560,16 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": []
-    },    
+    },
     {
         "id": "max_vray_rawFileName",
         "name": "Vray raw filename",
         "description": "Checks if the Vray raw filename is given (not empty)",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "warning",
@@ -495,14 +578,16 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": []
-    },    
+    },
     {
         "id": "max_vray_separateChannels",
         "name": "Vray seperate render channels",
         "description": "Checks if Vray separate render channels is enabled",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "warning",
@@ -511,14 +596,16 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": []
-    },    
+    },
     {
         "id": "max_vray_separateFolders",
         "name": "Vray seperate folders",
         "description": "Checks if Vray separate folders is enabled",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "warning",
@@ -527,14 +614,16 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": []
-    },    
+    },
     {
         "id": "max_vray_renderChannelsName",
         "name": "Vray render channels filename",
         "description": "Checks if the Vray render channels filename is not empty",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "warning",
@@ -543,14 +632,16 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": []
-    },    
+    },
     {
         "id": "max_vray_renderChannelsRGB",
         "name": "Vray render channels rgb",
         "description": "Checks if the Vray render channels rgb is enabled",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "warning",
@@ -559,14 +650,16 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": []
-    },    
+    },
     {
         "id": "max_vray_renderChannelsAlpha",
         "name": "Vray render channels alpha",
         "description": "Checks if the Vray render channels alpha is enabled",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "warning",
@@ -575,14 +668,16 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": []
-    },    
+    },
     {
         "id": "max_vray_saveVfbCorrections",
         "name": "Vray save vfb corrections",
         "description": "Checks if vfb corrections are applied",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "critical",
@@ -591,14 +686,16 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": []
-    },    
+    },
     {
         "id": "max_vray_clearPreviousRender",
         "name": "Vray clear previous render",
         "description": "Checks if the Vray clear previous render is enabled",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "critical",
@@ -607,14 +704,16 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": []
-    },    
+    },
     {
         "id": "max_vray_vfbRegion",
         "name": "Vray vfb region",
         "description": "Checks if the Vray VFB region is disabled",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "critical",
@@ -623,14 +722,16 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": []
-    },    
+    },
     {
         "id": "max_vray_vfbMousetrack",
         "name": "Vray vfb mousetrack",
         "description": "Checks if Vray vfb mousetrack is disabled",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "critical",
@@ -639,14 +740,16 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": []
-    },    
+    },
     {
         "id": "max_vray_resumableRender",
         "name": "Vray resumable rendering",
         "description": "Checks if the Vray resumable rendering is disabled",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "critical",
@@ -655,14 +758,16 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": []
-    },    
+    },
     {
         "id": "max_corona_systemDr",
         "name": "Corona distributed rendering",
         "description": "Checks if the Corona distributed rendering is disabled",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "critical",
@@ -671,14 +776,16 @@
         "check_args": [],
         "fix_fn": "fix_max_corona_systemDr",
         "fix_args": []
-    },    
+    },
     {
         "id": "max_corona_systemDrSearchlan",
         "name": "Corona distributed rendering search lan",
         "description": "Checks if the Corona distributed rendering (search Lan) is disabled",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "critical",
@@ -694,7 +801,9 @@
         "description": "Checks if Corona render selected is disabled",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "critical",
@@ -710,7 +819,9 @@
         "description": "Checks if material override is disabled",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "critical",
@@ -726,7 +837,9 @@
         "description": "Checks if material override has a no material assigned",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "critical",
@@ -742,7 +855,9 @@
         "description": "Checks if no limits are set in the render settings",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "critical",
@@ -758,7 +873,9 @@
         "description": "Checks if Corona render stamp is disabled",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "critical",
@@ -774,7 +891,9 @@
         "description": "Checks if Corona vfb region is disabled",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "critical",
@@ -790,7 +909,9 @@
         "description": "Checks if FStorm render masks are disabled",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "critical",
@@ -806,7 +927,9 @@
         "description": "Checks if Fstorm override is disabled",
         "host": "3dsmax",
         "enabled": true,
-        "collection": ["default"],
+        "collection": [
+            "default"
+        ],
         "author": "Pulze",
         "language": "maxscript",
         "level": "critical",
@@ -816,4 +939,4 @@
         "fix_fn": "",
         "fix_args": []
     }
-] 
+]
