@@ -212,7 +212,7 @@
         "message": "Your FPS settings don't match",
         "check_fn": "check_max_frameRate",
         "check_args": [
-            "arg"
+            30
         ],
         "fix_fn": "",
         "fix_args": []
@@ -286,7 +286,7 @@
         "message": "Set the display unit to the correct unit",
         "check_fn": "check_max_scene_displayUnit",
         "check_args": [
-            "arg"
+            "metric"
         ],
         "fix_fn": "",
         "fix_args": []
@@ -306,7 +306,7 @@
         "message": "Set the system unit to the correct unit",
         "check_fn": "check_max_scene_systemUnit",
         "check_args": [
-            "arg"
+            "centimeters"
         ],
         "fix_fn": "",
         "fix_args": []
@@ -434,11 +434,11 @@
         "message": "The min shading rate doesn't match the specific value",
         "check_fn": "check_max_vray_minShadingRate",
         "check_args": [
-            "arg"
+            6
         ],
         "fix_fn": "fix_max_vray_minShadingRate",
         "fix_args": [
-            "arg"
+            6
         ]
     },
     {
@@ -456,11 +456,11 @@
         "message": "The min subdivs doesn't match the specific value",
         "check_fn": "check_max_vray_minSubdivs",
         "check_args": [
-            "arg"
+            1
         ],
         "fix_fn": "fix_max_vray_minSubdivs",
         "fix_args": [
-            "arg"
+            1
         ]
     },
     {
@@ -478,11 +478,11 @@
         "message": "The max subdivs doesn't match the specific value",
         "check_fn": "check_max_vray_maxSubdivs",
         "check_args": [
-            "arg"
+            100
         ],
         "fix_fn": "fix_max_vray_maxSubdivs",
         "fix_args": [
-            "arg"
+            100
         ]
     },
     {
@@ -500,11 +500,11 @@
         "message": "Checks if the Vray noise threshold is matching the specific value",
         "check_fn": "check_max_vray_noiseThreshold",
         "check_args": [
-            "arg"
+            0.01
         ],
         "fix_fn": "fix_max_vray_noiseThreshold",
         "fix_args": [
-            "arg"
+            0.01
         ]
     },
     {
