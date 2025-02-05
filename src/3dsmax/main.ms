@@ -150,7 +150,7 @@ fn check_max_frameRange=
  */
 fn check_max_frameNth= 
 (
-   return rendNThFrame > 1
+   return rendNThFrame == 1
 )
 
 /*
