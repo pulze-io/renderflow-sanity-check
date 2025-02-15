@@ -23,7 +23,7 @@
         "name": "Autoback filename",
         "description": "Checks if the filename contains the word 'autoback'",
         "host": "3dsmax",
-        "enabled": true,
+        "enabled": false,
         "collection": [
             "default"
         ],
@@ -42,7 +42,7 @@
         "name": "Recover filename",
         "description": "Check if the filename contains the word 'recover'",
         "host": "3dsmax",
-        "enabled": true,
+        "enabled": false,
         "collection": [
             "default"
         ],
@@ -86,7 +86,7 @@
         ],
         "author": "Pulze",
         "language": "maxscript",
-        "level": "critical",
+        "level": "warning",
         "message": "Set the render type to #view",
         "check_fn": "check_max_renderType",
         "check_args": [],
@@ -118,13 +118,13 @@
         "name": "Pixel aspect",
         "description": "Checks if the pixel aspect ratio is set to 1.0",
         "host": "3dsmax",
-        "enabled": true,
+        "enabled": false,
         "collection": [
             "default"
         ],
         "author": "Pulze",
         "language": "maxscript",
-        "level": "critical",
+        "level": "warning",
         "message": "Set the pixel aspect ratio to 1.0",
         "check_fn": "check_max_pixelAspect",
         "check_args": [],
@@ -143,7 +143,7 @@
         ],
         "author": "Pulze",
         "language": "maxscript",
-        "level": "critical",
+        "level": "warning",
         "message": "No active camera found in the scene",
         "check_fn": "check_max_cameraUndefined",
         "check_args": [],
@@ -156,7 +156,7 @@
         "name": "Single frame",
         "description": "Checks if the scene is set to render a single frame",
         "host": "3dsmax",
-        "enabled": true,
+        "enabled": false,
         "collection": [
             "default"
         ],
@@ -175,7 +175,7 @@
         "name": "Frame range",
         "description": "Checks if the scene is set to render a frame range",
         "host": "3dsmax",
-        "enabled": true,
+        "enabled": false,
         "collection": [
             "default"
         ],
@@ -213,13 +213,13 @@
         "name": "Frame rate",
         "description": "Checks if the frame rate is set to right value",
         "host": "3dsmax",
-        "enabled": true,
+        "enabled": false,
         "collection": [
             "default"
         ],
         "author": "Pulze",
         "language": "maxscript",
-        "level": "critical",
+        "level": "warning",
         "message": "Your FPS settings don't match",
         "check_fn": "check_max_frameRate",
         "check_args": [
@@ -240,7 +240,7 @@
         ],
         "author": "Pulze",
         "language": "maxscript",
-        "level": "critical",
+        "level": "warning",
         "message": "Specify your output path",
         "check_fn": "check_max_outputEnabled",
         "check_args": [],
@@ -270,9 +270,9 @@
     {
         "id": "max_output_isNetworkpath",
         "name": "Network path",
-        "description": "Checks if the output path is a network path",
+        "description": "Checks if the output path is set to network path",
         "host": "3dsmax",
-        "enabled": true,
+        "enabled": false,
         "collection": [
             "default"
         ],
@@ -291,7 +291,7 @@
         "name": "Units display type",
         "description": "Checks if the units display type is set to the correct unit",
         "host": "3dsmax",
-        "enabled": true,
+        "enabled": false,
         "collection": [
             "default"
         ],
@@ -312,7 +312,7 @@
         "name": "Units system type",
         "description": "Checks if the units system type is set to the correct unit",
         "host": "3dsmax",
-        "enabled": true,
+        "enabled": false,
         "collection": [
             "default"
         ],
@@ -331,7 +331,7 @@
     {
         "id": "max_elementsCount",
         "name": "Elements count",
-        "description": "Checks if the scene has render elements (AOVs excluded)",
+        "description": "Checks if the scene has render elements",
         "host": "3dsmax",
         "enabled": true,
         "collection": [
@@ -358,7 +358,7 @@
         ],
         "author": "Pulze",
         "language": "maxscript",
-        "level": "critical",
+        "level": "warning",
         "message": "Render elements are not active in the scene",
         "check_fn": "check_max_elementsActive",
         "check_args": [],
@@ -396,7 +396,7 @@
         ],
         "author": "Pulze",
         "language": "maxscript",
-        "level": "critical",
+        "level": "warning",
         "message": "Vray distributed rendering is enabled in the scene",
         "check_fn": "check_max_vray_systemDr",
         "check_args": [],
@@ -434,8 +434,8 @@
         ],
         "author": "Pulze",
         "language": "maxscript",
-        "level": "critical",
-        "message": "Disable the vray render masks (none)",
+        "level": "warning",
+        "message": "Disable the vray render masks",
         "check_fn": "check_max_vray_renderMask",
         "check_args": [],
         "fix_fn": "fix_max_vray_renderMask",
@@ -447,7 +447,7 @@
         "name": "Vray min shading rate",
         "description": "Checks if the Vray min shading rate is set to the right value",
         "host": "3dsmax",
-        "enabled": true,
+        "enabled": false,
         "collection": [
             "default"
         ],
@@ -470,7 +470,7 @@
         "name": "Vray min subdivs",
         "description": "Checks if the Vray min subdivs is set to the right value",
         "host": "3dsmax",
-        "enabled": true,
+        "enabled": false,
         "collection": [
             "default"
         ],
@@ -493,7 +493,7 @@
         "name": "Vray max subdivs",
         "description": "Checks if the Vray max subdivs is set to the right value",
         "host": "3dsmax",
-        "enabled": true,
+        "enabled": false,
         "collection": [
             "default"
         ],
@@ -516,13 +516,13 @@
         "name": "Vray noise threshold",
         "description": "Checks if the Vray noise threshold is matching the specific value",
         "host": "3dsmax",
-        "enabled": true,
+        "enabled": false,
         "collection": [
             "default"
         ],
         "author": "Pulze",
         "language": "maxscript",
-        "level": "critical",
+        "level": "warning",
         "message": "Checks if the Vray noise threshold is matching the specific value",
         "check_fn": "check_max_vray_noiseThreshold",
         "check_args": [
@@ -545,7 +545,7 @@
         ],
         "author": "Pulze",
         "language": "maxscript",
-        "level": "critical",
+        "level": "warning",
         "message": "Material override is enabled",
         "check_fn": "check_max_vray_overrideDisabled",
         "check_args": [],
@@ -564,7 +564,7 @@
         ],
         "author": "Pulze",
         "language": "maxscript",
-        "level": "critical",
+        "level": "warning",
         "message": "Hiiden lights are enabled",
         "check_fn": "check_max_vray_hiddenLights",
         "check_args": [],
@@ -577,7 +577,7 @@
         "name": "Vray save raw file",
         "description": "Checks if Vray save raw file is enabled",
         "host": "3dsmax",
-        "enabled": true,
+        "enabled": false,
         "collection": [
             "default"
         ],
@@ -594,9 +594,9 @@
     {
         "id": "max_vray_rawFileName",
         "name": "Vray raw filename",
-        "description": "Checks if the Vray raw filename is given (not empty)",
+        "description": "Checks if the Vray raw filename is not empty",
         "host": "3dsmax",
-        "enabled": true,
+        "enabled": false,
         "collection": [
             "default"
         ],
@@ -615,7 +615,7 @@
         "name": "Vray seperate render channels",
         "description": "Checks if Vray separate render channels is enabled",
         "host": "3dsmax",
-        "enabled": true,
+        "enabled": false,
         "collection": [
             "default"
         ],
@@ -624,25 +624,6 @@
         "level": "warning",
         "message": "Enable 'seperate' render channels",
         "check_fn": "check_max_vray_separateChannels",
-        "check_args": [],
-        "fix_fn": "",
-        "fix_args": [],
-        "version": "1.0.0"
-    },
-    {
-        "id": "max_vray_separateFolders",
-        "name": "Vray seperate folders",
-        "description": "Checks if Vray separate folders is enabled",
-        "host": "3dsmax",
-        "enabled": true,
-        "collection": [
-            "default"
-        ],
-        "author": "Pulze",
-        "language": "maxscript",
-        "level": "warning",
-        "message": "Enable 'seperate' folders",
-        "check_fn": "check_max_vray_separateFolders",
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
@@ -668,10 +649,29 @@
         "version": "1.0.0"
     },
     {
+        "id": "max_vray_separateFolders",
+        "name": "Vray seperate folders",
+        "description": "Checks if Vray separate folders is enabled",
+        "host": "3dsmax",
+        "enabled": false,
+        "collection": [
+            "default"
+        ],
+        "author": "Pulze",
+        "language": "maxscript",
+        "level": "warning",
+        "message": "Enable 'seperate' folders",
+        "check_fn": "check_max_vray_separateFolders",
+        "check_args": [],
+        "fix_fn": "",
+        "fix_args": [],
+        "version": "1.0.0"
+    },
+    {
         "id": "max_vray_renderChannelsRGB",
         "name": "Vray render channels rgb",
         "description": "Checks if the Vray render channels rgb is enabled",
-        "host": "3dsmax",
+        "host": "false",
         "enabled": true,
         "collection": [
             "default"
@@ -691,7 +691,7 @@
         "name": "Vray render channels alpha",
         "description": "Checks if the Vray render channels alpha is enabled",
         "host": "3dsmax",
-        "enabled": true,
+        "enabled": false,
         "collection": [
             "default"
         ],
@@ -710,13 +710,13 @@
         "name": "Vray save vfb corrections",
         "description": "Checks if vfb corrections are applied",
         "host": "3dsmax",
-        "enabled": true,
+        "enabled": false,
         "collection": [
             "default"
         ],
         "author": "Pulze",
         "language": "maxscript",
-        "level": "critical",
+        "level": "warning",
         "message": "Enable 'Save VFB corrections'",
         "check_fn": "check_max_vray_saveVfbCorrections",
         "check_args": [],
@@ -735,7 +735,7 @@
         ],
         "author": "Pulze",
         "language": "maxscript",
-        "level": "critical",
+        "level": "warning",
         "message": "Switch to 'clear previous render'",
         "check_fn": "check_max_vray_clearPreviousRender",
         "check_args": [],
@@ -754,7 +754,7 @@
         ],
         "author": "Pulze",
         "language": "maxscript",
-        "level": "critical",
+        "level": "warning",
         "message": "Disable region rendering in VFB",
         "check_fn": "check_max_vray_vfbRegion",
         "check_args": [],
@@ -773,7 +773,7 @@
         ],
         "author": "Pulze",
         "language": "maxscript",
-        "level": "critical",
+        "level": "warning",
         "message": "Disable mousetrack in VFB",
         "check_fn": "check_max_vray_vfbMousetrack",
         "check_args": [],
@@ -786,13 +786,13 @@
         "name": "Vray resumable rendering",
         "description": "Checks if the Vray resumable rendering is disabled",
         "host": "3dsmax",
-        "enabled": true,
+        "enabled": false,
         "collection": [
             "default"
         ],
         "author": "Pulze",
         "language": "maxscript",
-        "level": "critical",
+        "level": "warning",
         "message": "Disable resumable rendering in the settings",
         "check_fn": "check_max_vray_resumableRender",
         "check_args": [],
@@ -805,13 +805,13 @@
         "name": "Corona distributed rendering",
         "description": "Checks if the Corona distributed rendering is disabled",
         "host": "3dsmax",
-        "enabled": true,
+        "enabled": false,
         "collection": [
             "default"
         ],
         "author": "Pulze",
         "language": "maxscript",
-        "level": "critical",
+        "level": "warning",
         "message": "Disable distributed rendering in the corona settings",
         "check_fn": "check_max_corona_systemDr",
         "check_args": [],
@@ -824,13 +824,13 @@
         "name": "Corona distributed rendering search lan",
         "description": "Checks if the Corona distributed rendering (search Lan) is disabled",
         "host": "3dsmax",
-        "enabled": true,
+        "enabled": false,
         "collection": [
             "default"
         ],
         "author": "Pulze",
         "language": "maxscript",
-        "level": "critical",
+        "level": "warning",
         "message": "Disable search LAN in the corona distributed rendering settings",
         "check_fn": "check_max_corona_systemDrSearchlan",
         "check_args": [],
@@ -868,7 +868,7 @@
         ],
         "author": "Pulze",
         "language": "maxscript",
-        "level": "critical",
+        "level": "warning",
         "message": "Disable corona material override",
         "check_fn": "check_max_corona_overrideDisabled",
         "check_args": [],
@@ -881,13 +881,13 @@
         "name": "Corona material override (material)",
         "description": "Checks if material override has a no material assigned",
         "host": "3dsmax",
-        "enabled": true,
+        "enabled": false,
         "collection": [
             "default"
         ],
         "author": "Pulze",
         "language": "maxscript",
-        "level": "critical",
+        "level": "warning",
         "message": "Override has no material assigned",
         "check_fn": "check_max_corona_overrideNoMaterial",
         "check_args": [],
@@ -925,7 +925,7 @@
         ],
         "author": "Pulze",
         "language": "maxscript",
-        "level": "critical",
+        "level": "warning",
         "message": "Disable frame stamps in the corona settings",
         "check_fn": "check_max_corona_renderStamp",
         "check_args": [],
@@ -944,7 +944,7 @@
         ],
         "author": "Pulze",
         "language": "maxscript",
-        "level": "critical",
+        "level": "warning",
         "message": "Disable region in corona vfb",
         "check_fn": "check_max_corona_vfbRegion",
         "check_args": [],
@@ -963,7 +963,7 @@
         ],
         "author": "Pulze",
         "language": "maxscript",
-        "level": "critical",
+        "level": "warning",
         "message": "Disable render masks in Fstorm settings",
         "check_fn": "check_max_fstorm_renderMask",
         "check_args": [],
@@ -982,7 +982,7 @@
         ],
         "author": "Pulze",
         "language": "maxscript",
-        "level": "critical",
+        "level": "warning",
         "message": "Disable ovveride in the FStorm settings",
         "check_fn": "check_max_fstorm_overrideDisabled",
         "check_args": [],
