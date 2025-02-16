@@ -159,7 +159,7 @@ fn check_max_frameNth=
  */
 fn check_max_frameRate arg=
 (
-   return frameRate == arg
+   return frameRate == arg as integer
 )
 
 /*
@@ -380,7 +380,7 @@ fn check_max_vray_minShadingRate arg=
 (
    if (isVray()) do
    (
-      return renderers.current.imageSampler_shadingRate == arg
+      return renderers.current.imageSampler_shadingRate == arg as integer
    )
 )
 
@@ -392,7 +392,7 @@ fn fix_max_vray_minShadingRate arg=
 (
    if (isVray()) do
    (
-      renderers.current.imageSampler_shadingRate = arg
+      renderers.current.imageSampler_shadingRate = arg as integer
    )
 )
 
@@ -404,7 +404,7 @@ fn check_max_vray_minSubdivs arg=
 (
    if (isVray()) do
    (
-      return renderers.current.progressive_minSamples == arg
+      return renderers.current.progressive_minSamples == arg as integer
    )
 )
 
@@ -416,7 +416,7 @@ fn fix_max_vray_minSubdivs arg=
 (
    if (isVray()) do
    (
-      renderers.current.progressive_minSamples = arg
+      renderers.current.progressive_minSamples = arg as integer
    )
 )
 
@@ -428,7 +428,7 @@ fn check_max_vray_maxSubdivs arg=
 (
    if (isVray()) do
    (
-      return renderers.current.progressive_maxSamples == arg
+      return renderers.current.progressive_maxSamples == arg as integer
    )
 )
 
@@ -440,7 +440,7 @@ fn fix_max_vray_maxSubdivs arg=
 (
    if (isVray()) do
    (
-      renderers.current.progressive_maxSamples = arg
+      renderers.current.progressive_maxSamples = arg as integer
    )
 )
 
@@ -452,7 +452,7 @@ fn check_max_vray_noiseThreshold arg=
 (
    if (isVray()) do
    (
-      return renderers.current.progressive_noise_threshold == arg
+      return renderers.current.progressive_noise_threshold == arg as float
    )
 )
 
@@ -464,7 +464,7 @@ fn fix_max_vray_noiseThreshold arg=
 (
    if (isVray()) do
    (
-      renderers.current.progressive_noise_threshold = arg
+      renderers.current.progressive_noise_threshold = arg as float
    )
 )
 
