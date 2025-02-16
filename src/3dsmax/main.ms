@@ -177,7 +177,7 @@ fn check_max_outputEnabled=
  */
 fn check_max_output_movieFormat=
 (
-   return (getFilenameType rendOutputFilename != ".avi")
+   return (getFilenameType rendOutputFilename != ".avi") and (getFilenameType rendOutputFilename != ".mov")
 )
 
 /*
@@ -209,7 +209,7 @@ fn check_max_scene_systemUnit arg=
 
 /*
  * Elements count
- * Check if the scene has render elements (AOVs excluded)
+ * Check if the scene has render elements
  */
 fn check_max_elementsCount= 
 (
@@ -226,7 +226,7 @@ fn check_max_elementsCount=
  
 /*
  * Elements active
- * Check if the scene has elements activated (AOVs excluded)
+ * Check if the scene has elements activated
  */
 fn check_max_elementsActive=
 (
@@ -264,8 +264,18 @@ fn fix_max_elementsActive=
  */
 fn check_max_objects_noMaterials=
 (
-   local objectsNoMaterial = for obj in objects where obj.material == undefined collect obj
-   return objectsNoMaterial.count == 0
+   local nomat = #()
+	local excludeFromCheck = #(BoneGeometry, VrayProxy)
+
+   for i = 1 to geometry.count where (finditem excludeFromCheck (classof geometry[i]) == 0) do
+	(
+		if (geometry[i].material == undefined) do
+		(
+			appendIfUnique nomat geometry[i].name
+		)
+	)
+   
+   return nomat.count == 0
 )
 
 /*
@@ -275,8 +285,19 @@ fn check_max_objects_noMaterials=
 fn fix_max_objects_noMaterials=
 (
    clearSelection()	
-   local objectsNoMaterial = for obj in objects where obj.material == undefined collect obj
-   select objectsNoMaterial
+   
+   local nomat = #()
+	local excludeFromCheck = #(BoneGeometry, VrayProxy)
+
+   for i = 1 to geometry.count where (finditem excludeFromCheck (classof geometry[i]) == 0) do
+	(
+		if (geometry[i].material == undefined) do
+		(
+			appendIfUnique nomat geometry[i].name
+		)
+	)
+   
+   select nomat
 )
 
 /*
