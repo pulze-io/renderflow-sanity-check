@@ -651,7 +651,6 @@ fn check_max_corona_systemDr=
    )
 )
 
-
 /*
  * Fix Corona distributed rendering
  * Disables the Corona distributed rendering
