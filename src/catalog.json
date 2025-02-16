@@ -2,7 +2,7 @@
     {
         "id": "max_filenameUntitled",
         "name": "Untitled filename",
-        "description": "Checks if the filename is empty (untitled)",
+        "description": "Check if the filename is empty (untitled)",
         "host": "3dsmax",
         "enabled": true,
         "collection": [
@@ -21,7 +21,7 @@
     {
         "id": "max_filenameAutoback",
         "name": "Autoback filename",
-        "description": "Checks if the filename contains the word 'autoback'",
+        "description": "Check if the filename contains the word 'autoback'",
         "host": "3dsmax",
         "enabled": false,
         "collection": [
@@ -59,7 +59,7 @@
     {
         "id": "max_sceneEmpty",
         "name": "Empty scene",
-        "description": "Checks if the scene has objects",
+        "description": "Check if the scene has objects",
         "host": "3dsmax",
         "enabled": true,
         "collection": [
@@ -78,7 +78,7 @@
     {
         "id": "max_renderType",
         "name": "Render type",
-        "description": "Checks if the render type is set to #view",
+        "description": "Check if the render type is set to view",
         "host": "3dsmax",
         "enabled": true,
         "collection": [
@@ -97,7 +97,7 @@
     {
         "id": "max_renderProduction",
         "name": "Scene production",
-        "description": "Checks if the scene is set to production",
+        "description": "Check if the scene is set to production",
         "host": "3dsmax",
         "enabled": true,
         "collection": [
@@ -116,7 +116,7 @@
     {
         "id": "max_pixelAspect",
         "name": "Pixel aspect",
-        "description": "Checks if the pixel aspect ratio is set to 1.0",
+        "description": "Check if the pixel aspect ratio is set to 1.0",
         "host": "3dsmax",
         "enabled": false,
         "collection": [
@@ -135,7 +135,7 @@
     {
         "id": "max_cameraUndefined",
         "name": "Active camera",
-        "description": "Checks if the scene has an active camera",
+        "description": "Check if the scene has an active camera",
         "host": "3dsmax",
         "enabled": true,
         "collection": [
@@ -154,7 +154,7 @@
     {
         "id": "max_frameSingle",
         "name": "Single frame",
-        "description": "Checks if the scene is set to render a single frame",
+        "description": "Check if the scene is set to render a single frame",
         "host": "3dsmax",
         "enabled": false,
         "collection": [
@@ -173,7 +173,7 @@
     {
         "id": "max_frameRange",
         "name": "Frame range",
-        "description": "Checks if the scene is set to render a frame range",
+        "description": "Check if the scene is set to render a frame range",
         "host": "3dsmax",
         "enabled": false,
         "collection": [
@@ -192,7 +192,7 @@
     {
         "id": "max_frameNth",
         "name": "Frame step",
-        "description": "Checks if the scene is set to 'render every Nth frame'",
+        "description": "Check if the scene is set to 'render every Nth frame'",
         "host": "3dsmax",
         "enabled": true,
         "collection": [
@@ -211,7 +211,7 @@
     {
         "id": "max_frameRate",
         "name": "Frame rate",
-        "description": "Checks if the frame rate is set to right value",
+        "description": "Check if the frame rate is set to right value",
         "host": "3dsmax",
         "enabled": false,
         "collection": [
@@ -232,7 +232,7 @@
     {
         "id": "max_outputEnabled",
         "name": "Output exists",
-        "description": "Checks if the output path is set in the render settings",
+        "description": "Check if the output path is set in the render settings",
         "host": "3dsmax",
         "enabled": true,
         "collection": [
@@ -251,7 +251,7 @@
     {
         "id": "max_output_movieFormat",
         "name": "Output movie format",
-        "description": "Checks if the output file format is set to a movie format",
+        "description": "Check if the output file format is set to a movie format",
         "host": "3dsmax",
         "enabled": true,
         "collection": [
@@ -270,7 +270,7 @@
     {
         "id": "max_output_isNetworkpath",
         "name": "Network path",
-        "description": "Checks if the output path is set to network path",
+        "description": "Check if the output path is set to network path",
         "host": "3dsmax",
         "enabled": false,
         "collection": [
@@ -289,7 +289,7 @@
     {
         "id": "max_scene_displayUnit",
         "name": "Units display type",
-        "description": "Checks if the units display type is set to the correct unit",
+        "description": "Check if the units display type is set to the correct unit",
         "host": "3dsmax",
         "enabled": false,
         "collection": [
@@ -310,7 +310,7 @@
     {
         "id": "max_scene_systemUnit",
         "name": "Units system type",
-        "description": "Checks if the units system type is set to the correct unit",
+        "description": "Check if the units system type is set to the correct unit",
         "host": "3dsmax",
         "enabled": false,
         "collection": [
@@ -331,7 +331,7 @@
     {
         "id": "max_elementsCount",
         "name": "Elements count",
-        "description": "Checks if the scene has render elements",
+        "description": "Check if the scene has render elements",
         "host": "3dsmax",
         "enabled": true,
         "collection": [
@@ -350,7 +350,7 @@
     {
         "id": "max_elementsActive",
         "name": "Elements active",
-        "description": "Checks if the render elements are active in the scene",
+        "description": "Check if the render elements are active in the scene",
         "host": "3dsmax",
         "enabled": true,
         "collection": [
@@ -369,7 +369,7 @@
     {
         "id": "max_objects_noMaterials",
         "name": "Objects without materials",
-        "description": "Checks if there are objects that have no material assigned to them (selects them)",
+        "description": "Check if there are objects that have no material assigned to them",
         "host": "3dsmax",
         "enabled": true,
         "collection": [
@@ -381,14 +381,14 @@
         "message": "Some objects have no material assigned to them",
         "check_fn": "check_max_objects_noMaterials",
         "check_args": [],
-        "fix_fn": "",
+        "fix_fn": "fix_max_objects_noMaterials",
         "fix_args": [],
         "version": "1.0.0"
     },
     {
         "id": "max_vray_systemDr",
-        "name": "Vray distributed rendering",
-        "description": "Checks if vray distributed rendering is enabled in the scene",
+        "name": "V-Ray distributed rendering",
+        "description": "Check if vray distributed rendering is enabled",
         "host": "3dsmax",
         "enabled": true,
         "collection": [
@@ -397,7 +397,7 @@
         "author": "Pulze",
         "language": "maxscript",
         "level": "warning",
-        "message": "Vray distributed rendering is enabled in the scene",
+        "message": "V-Ray distributed rendering is enabled",
         "check_fn": "check_max_vray_systemDr",
         "check_args": [],
         "fix_fn": "fix_max_vray_systemDr",
@@ -406,8 +406,8 @@
     },
     {
         "id": "max_vray_frameStamp",
-        "name": "Vray framestamp",
-        "description": "Checks if the Vray frame stamp is disabled",
+        "name": "V-Ray framestamp",
+        "description": "Check if the V-Ray frame stamp is disabled",
         "host": "3dsmax",
         "enabled": true,
         "collection": [
@@ -425,8 +425,8 @@
     },
     {
         "id": "max_vray_renderMask",
-        "name": "Vray rendermask",
-        "description": "Checks if vray render masks are disabled",
+        "name": "V-Ray rendermask",
+        "description": "Check if vray render masks are disabled",
         "host": "3dsmax",
         "enabled": true,
         "collection": [
@@ -444,8 +444,8 @@
     },
     {
         "id": "max_vray_minShadingRate",
-        "name": "Vray min shading rate",
-        "description": "Checks if the Vray min shading rate is set to the right value",
+        "name": "V-Ray min shading rate",
+        "description": "Check if the V-Ray min shading rate is set to the right value",
         "host": "3dsmax",
         "enabled": false,
         "collection": [
@@ -467,8 +467,8 @@
     },
     {
         "id": "max_vray_minSubdivs",
-        "name": "Vray min subdivs",
-        "description": "Checks if the Vray min subdivs is set to the right value",
+        "name": "V-Ray min subdivs",
+        "description": "Check if the V-Ray min subdivs is set to the right value",
         "host": "3dsmax",
         "enabled": false,
         "collection": [
@@ -490,8 +490,8 @@
     },
     {
         "id": "max_vray_maxSubdivs",
-        "name": "Vray max subdivs",
-        "description": "Checks if the Vray max subdivs is set to the right value",
+        "name": "V-Ray max subdivs",
+        "description": "Check V-Ray max subdivs value",
         "host": "3dsmax",
         "enabled": false,
         "collection": [
@@ -500,7 +500,7 @@
         "author": "Pulze",
         "language": "maxscript",
         "level": "warning",
-        "message": "The max subdivs doesn't match the specific value",
+        "message": "Max subdivs doesn't match the specific value",
         "check_fn": "check_max_vray_maxSubdivs",
         "check_args": [
             100
@@ -513,8 +513,8 @@
     },
     {
         "id": "max_vray_noiseThreshold",
-        "name": "Vray noise threshold",
-        "description": "Checks if the Vray noise threshold is matching the specific value",
+        "name": "V-Ray noise threshold",
+        "description": "Check if the V-Ray noise threshold is matching the specific value",
         "host": "3dsmax",
         "enabled": false,
         "collection": [
@@ -523,7 +523,7 @@
         "author": "Pulze",
         "language": "maxscript",
         "level": "warning",
-        "message": "Checks if the Vray noise threshold is matching the specific value",
+        "message": "Check if the V-Ray noise threshold is matching the specific value",
         "check_fn": "check_max_vray_noiseThreshold",
         "check_args": [
             0.01
@@ -536,8 +536,8 @@
     },
     {
         "id": "max_vray_overrideDisabled",
-        "name": "Vray material override",
-        "description": "Checks if material override is enabled",
+        "name": "V-Ray material override",
+        "description": "Check if material override is enabled",
         "host": "3dsmax",
         "enabled": true,
         "collection": [
@@ -555,8 +555,8 @@
     },
     {
         "id": "max_vray_hiddenLights",
-        "name": "Vray hidden lights",
-        "description": "Checks if render hidden lights feature is disabled",
+        "name": "V-Ray hidden lights",
+        "description": "Check if render hidden lights feature is disabled",
         "host": "3dsmax",
         "enabled": true,
         "collection": [
@@ -574,8 +574,8 @@
     },
     {
         "id": "max_vray_saveRawFile",
-        "name": "Vray save raw file",
-        "description": "Checks if Vray save raw file is enabled",
+        "name": "V-Ray save raw file",
+        "description": "Check if V-Ray save raw file is enabled",
         "host": "3dsmax",
         "enabled": false,
         "collection": [
@@ -593,8 +593,8 @@
     },
     {
         "id": "max_vray_rawFileName",
-        "name": "Vray raw filename",
-        "description": "Checks if the Vray raw filename is not empty",
+        "name": "V-Ray raw filename",
+        "description": "Check if the V-Ray raw filename is not empty",
         "host": "3dsmax",
         "enabled": false,
         "collection": [
@@ -612,8 +612,8 @@
     },
     {
         "id": "max_vray_separateChannels",
-        "name": "Vray seperate render channels",
-        "description": "Checks if Vray separate render channels is enabled",
+        "name": "V-Ray seperate render channels",
+        "description": "Check if V-Ray separate render channels is enabled",
         "host": "3dsmax",
         "enabled": false,
         "collection": [
@@ -631,8 +631,8 @@
     },
     {
         "id": "max_vray_renderChannelsName",
-        "name": "Vray render channels filename",
-        "description": "Checks if the Vray render channels filename is not empty",
+        "name": "V-Ray render channels filename",
+        "description": "Check if the V-Ray render channels filename is not empty",
         "host": "3dsmax",
         "enabled": true,
         "collection": [
@@ -650,8 +650,8 @@
     },
     {
         "id": "max_vray_separateFolders",
-        "name": "Vray seperate folders",
-        "description": "Checks if Vray separate folders is enabled",
+        "name": "V-Ray seperate folders",
+        "description": "Check if V-Ray separate folders is enabled",
         "host": "3dsmax",
         "enabled": false,
         "collection": [
@@ -660,7 +660,7 @@
         "author": "Pulze",
         "language": "maxscript",
         "level": "warning",
-        "message": "Enable 'seperate' folders",
+        "message": "Enable seperate folders",
         "check_fn": "check_max_vray_separateFolders",
         "check_args": [],
         "fix_fn": "",
@@ -669,9 +669,9 @@
     },
     {
         "id": "max_vray_renderChannelsRGB",
-        "name": "Vray render channels rgb",
-        "description": "Checks if the Vray render channels rgb is enabled",
-        "host": "false",
+        "name": "V-Ray render channels RGB",
+        "description": "Check if the V-Ray render channels RGB is enabled",
+        "host": "3dsmax",
         "enabled": true,
         "collection": [
             "default"
@@ -679,7 +679,7 @@
         "author": "Pulze",
         "language": "maxscript",
         "level": "warning",
-        "message": "Save rgb is disabled",
+        "message": "Save RGB is disabled",
         "check_fn": "check_max_vray_renderChannelsRGB",
         "check_args": [],
         "fix_fn": "",
@@ -688,8 +688,8 @@
     },
     {
         "id": "max_vray_renderChannelsAlpha",
-        "name": "Vray render channels alpha",
-        "description": "Checks if the Vray render channels alpha is enabled",
+        "name": "V-Ray render channels Alpha",
+        "description": "Check if the V-Ray render channels Alpha is enabled",
         "host": "3dsmax",
         "enabled": false,
         "collection": [
@@ -698,7 +698,7 @@
         "author": "Pulze",
         "language": "maxscript",
         "level": "warning",
-        "message": "Save alpha is disabled",
+        "message": "Save Alpha is disabled",
         "check_fn": "check_max_vray_renderChannelsAlpha",
         "check_args": [],
         "fix_fn": "",
@@ -707,8 +707,8 @@
     },
     {
         "id": "max_vray_saveVfbCorrections",
-        "name": "Vray save vfb corrections",
-        "description": "Checks if vfb corrections are applied",
+        "name": "V-Ray save VFB corrections",
+        "description": "Check if VFB corrections are applied",
         "host": "3dsmax",
         "enabled": false,
         "collection": [
@@ -726,8 +726,8 @@
     },
     {
         "id": "max_vray_clearPreviousRender",
-        "name": "Vray clear previous render",
-        "description": "Checks if the Vray clear previous render is enabled",
+        "name": "V-Ray clear previous render",
+        "description": "Check if the V-Ray clear previous render is enabled",
         "host": "3dsmax",
         "enabled": true,
         "collection": [
@@ -736,7 +736,7 @@
         "author": "Pulze",
         "language": "maxscript",
         "level": "warning",
-        "message": "Switch to 'clear previous render'",
+        "message": "Enable clear previous render",
         "check_fn": "check_max_vray_clearPreviousRender",
         "check_args": [],
         "fix_fn": "",
@@ -745,8 +745,8 @@
     },
     {
         "id": "max_vray_vfbRegion",
-        "name": "Vray vfb region",
-        "description": "Checks if the Vray VFB region is disabled",
+        "name": "V-Ray vfb region",
+        "description": "Check if the V-Ray VFB region is disabled",
         "host": "3dsmax",
         "enabled": true,
         "collection": [
@@ -764,8 +764,8 @@
     },
     {
         "id": "max_vray_vfbMousetrack",
-        "name": "Vray vfb mousetrack",
-        "description": "Checks if Vray vfb mousetrack is disabled",
+        "name": "V-Ray VFB mousetrack",
+        "description": "Check if V-Ray VFB mousetrack is disabled",
         "host": "3dsmax",
         "enabled": true,
         "collection": [
@@ -783,8 +783,8 @@
     },
     {
         "id": "max_vray_resumableRender",
-        "name": "Vray resumable rendering",
-        "description": "Checks if the Vray resumable rendering is disabled",
+        "name": "V-Ray resumable rendering",
+        "description": "Check if the V-Ray resumable rendering is disabled",
         "host": "3dsmax",
         "enabled": false,
         "collection": [
@@ -803,7 +803,7 @@
     {
         "id": "max_corona_systemDr",
         "name": "Corona distributed rendering",
-        "description": "Checks if the Corona distributed rendering is disabled",
+        "description": "Check if the Corona distributed rendering is disabled",
         "host": "3dsmax",
         "enabled": false,
         "collection": [
@@ -822,7 +822,7 @@
     {
         "id": "max_corona_systemDrSearchlan",
         "name": "Corona distributed rendering search lan",
-        "description": "Checks if the Corona distributed rendering (search Lan) is disabled",
+        "description": "Check if the Corona distributed rendering (search Lan) is disabled",
         "host": "3dsmax",
         "enabled": false,
         "collection": [
@@ -841,7 +841,7 @@
     {
         "id": "max_corona_renderSelected",
         "name": "Corona render selected",
-        "description": "Checks if Corona render selected is disabled",
+        "description": "Check if Corona render selected is disabled",
         "host": "3dsmax",
         "enabled": true,
         "collection": [
@@ -860,7 +860,7 @@
     {
         "id": "max_corona_overrideDisabled",
         "name": "Corona material override",
-        "description": "Checks if material override is disabled",
+        "description": "Check if material override is disabled",
         "host": "3dsmax",
         "enabled": true,
         "collection": [
@@ -879,7 +879,7 @@
     {
         "id": "max_corona_overrideNoMaterial",
         "name": "Corona material override (material)",
-        "description": "Checks if material override has a no material assigned",
+        "description": "Check if material override has a no material assigned",
         "host": "3dsmax",
         "enabled": false,
         "collection": [
@@ -898,7 +898,7 @@
     {
         "id": "max_corona_infiniteRender",
         "name": "Corona infinite render",
-        "description": "Checks if no limits are set in the render settings",
+        "description": "Check if no limits are set in the render settings",
         "host": "3dsmax",
         "enabled": true,
         "collection": [
@@ -917,7 +917,7 @@
     {
         "id": "max_corona_renderStamp",
         "name": "Corona render stamp",
-        "description": "Checks if Corona render stamp is disabled",
+        "description": "Check if Corona render stamp is disabled",
         "host": "3dsmax",
         "enabled": true,
         "collection": [
@@ -936,7 +936,7 @@
     {
         "id": "max_corona_vfbRegion",
         "name": "Corona vfb region",
-        "description": "Checks if Corona vfb region is disabled",
+        "description": "Check if Corona vfb region is disabled",
         "host": "3dsmax",
         "enabled": true,
         "collection": [
@@ -955,7 +955,7 @@
     {
         "id": "max_fstorm_renderMask",
         "name": "FStorm render mask",
-        "description": "Checks if FStorm render masks are disabled",
+        "description": "Check if FStorm render masks are disabled",
         "host": "3dsmax",
         "enabled": true,
         "collection": [
@@ -974,7 +974,7 @@
     {
         "id": "max_fstorm_overrideDisabled",
         "name": "FStorm override",
-        "description": "Checks if Fstorm override is disabled",
+        "description": "Check if Fstorm override is disabled",
         "host": "3dsmax",
         "enabled": true,
         "collection": [
