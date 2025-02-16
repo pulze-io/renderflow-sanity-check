@@ -231,7 +231,7 @@
     },
     {
         "id": "max_outputEnabled",
-        "name": "Output exists",
+        "name": "Output path",
         "description": "Check if the 3ds Max output path is set",
         "host": "3dsmax",
         "enabled": true,
