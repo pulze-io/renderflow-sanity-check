@@ -16,7 +16,7 @@
         "check_args": [],
         "fix_fn": "fix_max_filenameUntitled",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_filenameAutoback",
@@ -35,7 +35,7 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_filenameRecover",
@@ -54,7 +54,7 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_sceneEmpty",
@@ -73,7 +73,7 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_renderType",
@@ -92,7 +92,7 @@
         "check_args": [],
         "fix_fn": "fix_max_renderType",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_renderProduction",
@@ -111,7 +111,7 @@
         "check_args": [],
         "fix_fn": "fix_max_renderProduction",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_pixelAspect",
@@ -130,7 +130,7 @@
         "check_args": [],
         "fix_fn": "fix_max_pixelAspect",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_cameraUndefined",
@@ -149,7 +149,7 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_frameSingle",
@@ -168,7 +168,7 @@
         "check_args": [],
         "fix_fn": "fix_max_frameSingle",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_frameRange",
@@ -187,7 +187,7 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_frameNth",
@@ -206,7 +206,7 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_frameRate",
@@ -227,7 +227,7 @@
         ],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_outputEnabled",
@@ -246,7 +246,7 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_output_movieFormat",
@@ -265,7 +265,7 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_output_isNetworkpath",
@@ -284,7 +284,7 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_scene_displayUnit",
@@ -305,7 +305,7 @@
         ],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_scene_systemUnit",
@@ -326,7 +326,7 @@
         ],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_elementsCount",
@@ -345,7 +345,7 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_elementsActive",
@@ -364,7 +364,7 @@
         "check_args": [],
         "fix_fn": "fix_max_elementsActive",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_objects_noMaterials",
@@ -383,7 +383,7 @@
         "check_args": [],
         "fix_fn": "fix_max_objects_noMaterials",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_vray_systemDr",
@@ -402,7 +402,7 @@
         "check_args": [],
         "fix_fn": "fix_max_vray_systemDr",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_vray_frameStamp",
@@ -421,7 +421,7 @@
         "check_args": [],
         "fix_fn": "fix_max_vray_frameStamp",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_vray_renderMask",
@@ -440,7 +440,7 @@
         "check_args": [],
         "fix_fn": "fix_max_vray_renderMask",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_vray_minShadingRate",
@@ -463,7 +463,7 @@
         "fix_args": [
             6
         ],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_vray_minSubdivs",
@@ -486,7 +486,7 @@
         "fix_args": [
             1
         ],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_vray_maxSubdivs",
@@ -509,7 +509,7 @@
         "fix_args": [
             100
         ],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_vray_noiseThreshold",
@@ -532,7 +532,7 @@
         "fix_args": [
             0.01
         ],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_vray_overrideDisabled",
@@ -551,7 +551,7 @@
         "check_args": [],
         "fix_fn": "fix_max_vray_overrideDisabled",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_vray_hiddenLights",
@@ -570,7 +570,7 @@
         "check_args": [],
         "fix_fn": "fix_max_vray_hiddenLights",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_vray_saveRawFile",
@@ -589,7 +589,7 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_vray_rawFileName",
@@ -608,7 +608,7 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_vray_separateChannels",
@@ -627,7 +627,7 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_vray_renderChannelsName",
@@ -646,7 +646,7 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_vray_separateFolders",
@@ -665,7 +665,7 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_vray_renderChannelsRGB",
@@ -684,7 +684,7 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_vray_renderChannelsAlpha",
@@ -703,7 +703,7 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_vray_saveVfbCorrections",
@@ -722,7 +722,7 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_vray_clearPreviousRender",
@@ -741,7 +741,7 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_vray_vfbRegion",
@@ -760,7 +760,7 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_vray_vfbMousetrack",
@@ -779,7 +779,7 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_vray_resumableRender",
@@ -798,7 +798,7 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_corona_systemDr",
@@ -817,7 +817,7 @@
         "check_args": [],
         "fix_fn": "fix_max_corona_systemDr",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_corona_systemDrSearchlan",
@@ -836,7 +836,7 @@
         "check_args": [],
         "fix_fn": "fix_max_corona_systemDrSearchlan",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_corona_renderSelected",
@@ -855,7 +855,7 @@
         "check_args": [],
         "fix_fn": "fix_max_corona_renderSelected",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_corona_overrideDisabled",
@@ -874,7 +874,7 @@
         "check_args": [],
         "fix_fn": "fix_max_corona_overrideDisabled",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_corona_overrideNoMaterial",
@@ -893,7 +893,7 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_corona_infiniteRender",
@@ -912,7 +912,7 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_corona_renderStamp",
@@ -931,7 +931,7 @@
         "check_args": [],
         "fix_fn": "fix_max_corona_renderStamp",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_corona_vfbRegion",
@@ -950,7 +950,7 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_fstorm_renderMask",
@@ -969,7 +969,7 @@
         "check_args": [],
         "fix_fn": "fix_max_fstorm_renderMask",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     },
     {
         "id": "max_fstorm_overrideDisabled",
@@ -988,6 +988,6 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.0"
+        "version": "1.0.1"
     }
 ]
