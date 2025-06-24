@@ -4,6 +4,7 @@
         "name": "Untitled filename",
         "description": "Check if the filename is empty (untitled)",
         "host": "3dsmax",
+        "engine": null,
         "enabled": true,
         "collection": [
             "default"
@@ -16,13 +17,14 @@
         "check_args": [],
         "fix_fn": "fix_max_filenameUntitled",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_filenameAutoback",
         "name": "Autoback filename",
         "description": "Check if the filename contains the word 'autoback'",
         "host": "3dsmax",
+        "engine": null,
         "enabled": false,
         "collection": [
             "default"
@@ -35,13 +37,14 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_filenameRecover",
         "name": "Recover filename",
         "description": "Check if the filename contains the word 'recover'",
         "host": "3dsmax",
+        "engine": null,
         "enabled": false,
         "collection": [
             "default"
@@ -54,13 +57,14 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_sceneEmpty",
         "name": "Empty scene",
         "description": "Check if the scene is empty",
         "host": "3dsmax",
+        "engine": null,
         "enabled": true,
         "collection": [
             "default"
@@ -73,13 +77,14 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_renderType",
         "name": "Render type",
         "description": "Check if the render type is set to view",
         "host": "3dsmax",
+        "engine": null,
         "enabled": true,
         "collection": [
             "default"
@@ -92,13 +97,14 @@
         "check_args": [],
         "fix_fn": "fix_max_renderType",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_renderProduction",
         "name": "Scene production",
         "description": "Check if the scene is set to production rendering",
         "host": "3dsmax",
+        "engine": null,
         "enabled": true,
         "collection": [
             "default"
@@ -111,13 +117,14 @@
         "check_args": [],
         "fix_fn": "fix_max_renderProduction",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_pixelAspect",
         "name": "Pixel aspect",
         "description": "Check if the pixel aspect ratio is set to 1.0",
         "host": "3dsmax",
+        "engine": null,
         "enabled": false,
         "collection": [
             "default"
@@ -130,13 +137,14 @@
         "check_args": [],
         "fix_fn": "fix_max_pixelAspect",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_cameraUndefined",
         "name": "Active camera",
         "description": "Check if the scene has an active camera",
         "host": "3dsmax",
+        "engine": null,
         "enabled": true,
         "collection": [
             "default"
@@ -149,13 +157,14 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_frameSingle",
         "name": "Single frame",
         "description": "Check if the time output is set to single frame",
         "host": "3dsmax",
+        "engine": null,
         "enabled": false,
         "collection": [
             "default"
@@ -168,13 +177,14 @@
         "check_args": [],
         "fix_fn": "fix_max_frameSingle",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_frameRange",
         "name": "Frame range",
         "description": "Check if the time output is set to range",
         "host": "3dsmax",
+        "engine": null,
         "enabled": false,
         "collection": [
             "default"
@@ -187,13 +197,14 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_frameNth",
         "name": "Frame step",
         "description": "Check if the scene is set to render every frame",
         "host": "3dsmax",
+        "engine": null,
         "enabled": true,
         "collection": [
             "default"
@@ -206,13 +217,14 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_frameRate",
         "name": "Frame rate",
         "description": "Check if the frame rate is set to the correct value",
         "host": "3dsmax",
+        "engine": null,
         "enabled": false,
         "collection": [
             "default"
@@ -227,13 +239,14 @@
         ],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_outputEnabled",
         "name": "Output path",
         "description": "Check if the 3ds Max output path is set",
         "host": "3dsmax",
+        "engine": null,
         "enabled": true,
         "collection": [
             "default"
@@ -246,13 +259,14 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_output_movieFormat",
         "name": "Output movie format",
         "description": "Check if the output file format is set to a movie format",
         "host": "3dsmax",
+        "engine": null,
         "enabled": true,
         "collection": [
             "default"
@@ -265,13 +279,14 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_output_isNetworkpath",
         "name": "Network path",
         "description": "Check if the output path is set to a network path",
         "host": "3dsmax",
+        "engine": null,
         "enabled": false,
         "collection": [
             "default"
@@ -284,13 +299,14 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_scene_displayUnit",
         "name": "Units display type",
         "description": "Check if the units display type is set to the correct unit",
         "host": "3dsmax",
+        "engine": null,
         "enabled": false,
         "collection": [
             "default"
@@ -305,13 +321,14 @@
         ],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_scene_systemUnit",
         "name": "Units system type",
         "description": "Check if the units system type is set to the correct unit",
         "host": "3dsmax",
+        "engine": null,
         "enabled": false,
         "collection": [
             "default"
@@ -326,13 +343,14 @@
         ],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_elementsCount",
         "name": "Elements count",
         "description": "Check if the scene has render elements",
         "host": "3dsmax",
+        "engine": null,
         "enabled": true,
         "collection": [
             "default"
@@ -345,13 +363,14 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_elementsActive",
         "name": "Elements active",
         "description": "Check if the render elements are active",
         "host": "3dsmax",
+        "engine": null,
         "enabled": true,
         "collection": [
             "default"
@@ -364,13 +383,14 @@
         "check_args": [],
         "fix_fn": "fix_max_elementsActive",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_objects_noMaterials",
         "name": "Objects without materials",
         "description": "Check if there are objects that have no materials",
         "host": "3dsmax",
+        "engine": null,
         "enabled": true,
         "collection": [
             "default"
@@ -383,13 +403,14 @@
         "check_args": [],
         "fix_fn": "fix_max_objects_noMaterials",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_vray_systemDr",
         "name": "V-Ray DR",
         "description": "Check if V-Ray DR is disabled",
         "host": "3dsmax",
+        "engine": "vray",
         "enabled": true,
         "collection": [
             "default"
@@ -402,13 +423,14 @@
         "check_args": [],
         "fix_fn": "fix_max_vray_systemDr",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_vray_frameStamp",
         "name": "V-Ray framestamp",
         "description": "Check if V-Ray frame stamp is disabled",
         "host": "3dsmax",
+        "engine": "vray",
         "enabled": true,
         "collection": [
             "default"
@@ -421,13 +443,14 @@
         "check_args": [],
         "fix_fn": "fix_max_vray_frameStamp",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_vray_renderMask",
         "name": "V-Ray rendermask",
         "description": "Check if V-Ray render mask is disabled",
         "host": "3dsmax",
+        "engine": "vray",
         "enabled": true,
         "collection": [
             "default"
@@ -440,13 +463,14 @@
         "check_args": [],
         "fix_fn": "fix_max_vray_renderMask",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_vray_minShadingRate",
         "name": "V-Ray min shading rate",
         "description": "Check V-Ray min shading rate",
         "host": "3dsmax",
+        "engine": "vray",
         "enabled": false,
         "collection": [
             "default"
@@ -463,13 +487,14 @@
         "fix_args": [
             6
         ],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_vray_minSubdivs",
         "name": "V-Ray min subdivs",
         "description": "Check V-Ray min subdivs",
         "host": "3dsmax",
+        "engine": "vray",
         "enabled": false,
         "collection": [
             "default"
@@ -486,13 +511,14 @@
         "fix_args": [
             1
         ],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_vray_maxSubdivs",
         "name": "V-Ray max subdivs",
         "description": "Check V-Ray max subdivs",
         "host": "3dsmax",
+        "engine": "vray",
         "enabled": false,
         "collection": [
             "default"
@@ -509,13 +535,14 @@
         "fix_args": [
             100
         ],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_vray_noiseThreshold",
         "name": "V-Ray noise threshold",
         "description": "Check V-Ray noise threshold",
         "host": "3dsmax",
+        "engine": "vray",
         "enabled": false,
         "collection": [
             "default"
@@ -532,13 +559,14 @@
         "fix_args": [
             0.01
         ],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_vray_overrideDisabled",
         "name": "V-Ray material override",
         "description": "Check if V-Ray material override is enabled",
         "host": "3dsmax",
+        "engine": "vray",
         "enabled": true,
         "collection": [
             "default"
@@ -551,13 +579,14 @@
         "check_args": [],
         "fix_fn": "fix_max_vray_overrideDisabled",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_vray_hiddenLights",
         "name": "V-Ray hidden lights",
         "description": "Check if V-Ray render hidden lights is disabled",
         "host": "3dsmax",
+        "engine": "vray",
         "enabled": true,
         "collection": [
             "default"
@@ -570,13 +599,14 @@
         "check_args": [],
         "fix_fn": "fix_max_vray_hiddenLights",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_vray_saveRawFile",
         "name": "V-Ray save raw file",
         "description": "Check if V-Ray save raw file is enabled",
         "host": "3dsmax",
+        "engine": "vray",
         "enabled": false,
         "collection": [
             "default"
@@ -589,13 +619,14 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_vray_rawFileName",
         "name": "V-Ray raw filename",
         "description": "Check if V-Ray raw filename is not empty",
         "host": "3dsmax",
+        "engine": "vray",
         "enabled": false,
         "collection": [
             "default"
@@ -608,13 +639,14 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_vray_separateChannels",
         "name": "V-Ray seperate render channels",
         "description": "Check if V-Ray separate render channels is enabled",
         "host": "3dsmax",
+        "engine": "vray",
         "enabled": false,
         "collection": [
             "default"
@@ -627,13 +659,14 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_vray_renderChannelsName",
         "name": "V-Ray render channels filename",
         "description": "Check if V-Ray render channels filename is not empty",
         "host": "3dsmax",
+        "engine": "vray",
         "enabled": true,
         "collection": [
             "default"
@@ -646,13 +679,14 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_vray_separateFolders",
         "name": "V-Ray seperate folders",
         "description": "Check if V-Ray separate folders is enabled",
         "host": "3dsmax",
+        "engine": "vray",
         "enabled": false,
         "collection": [
             "default"
@@ -665,13 +699,14 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_vray_renderChannelsRGB",
         "name": "V-Ray render channels RGB",
         "description": "Check if V-Ray render channels RGB is enabled",
         "host": "3dsmax",
+        "engine": "vray",
         "enabled": true,
         "collection": [
             "default"
@@ -684,13 +719,14 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_vray_renderChannelsAlpha",
         "name": "V-Ray render channels Alpha",
         "description": "Check if V-Ray render channels Alpha is enabled",
         "host": "3dsmax",
+        "engine": "vray",
         "enabled": false,
         "collection": [
             "default"
@@ -703,13 +739,14 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_vray_saveVfbCorrections",
         "name": "V-Ray save VFB corrections",
         "description": "Check if save VFB corrections are enabled",
         "host": "3dsmax",
+        "engine": "vray",
         "enabled": false,
         "collection": [
             "default"
@@ -722,13 +759,14 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_vray_clearPreviousRender",
         "name": "V-Ray clear previous render",
         "description": "Check if V-Ray clear previous render is enabled",
         "host": "3dsmax",
+        "engine": "vray",
         "enabled": true,
         "collection": [
             "default"
@@ -741,13 +779,14 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_vray_vfbRegion",
         "name": "V-Ray VFB region",
         "description": "Check if V-Ray VFB region is disabled",
         "host": "3dsmax",
+        "engine": "vray",
         "enabled": true,
         "collection": [
             "default"
@@ -760,13 +799,14 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_vray_vfbMousetrack",
         "name": "V-Ray VFB mousetrack",
         "description": "Check if V-Ray VFB mousetrack is disabled",
         "host": "3dsmax",
+        "engine": "vray",
         "enabled": true,
         "collection": [
             "default"
@@ -779,13 +819,14 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_vray_resumableRender",
         "name": "V-Ray resumable rendering",
         "description": "Check if V-Ray resumable rendering is disabled",
         "host": "3dsmax",
+        "engine": "vray",
         "enabled": false,
         "collection": [
             "default"
@@ -798,13 +839,14 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_corona_systemDr",
         "name": "Corona distributed rendering",
         "description": "Check if Corona DR is disabled",
         "host": "3dsmax",
+        "engine": "corona",
         "enabled": false,
         "collection": [
             "default"
@@ -817,13 +859,14 @@
         "check_args": [],
         "fix_fn": "fix_max_corona_systemDr",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_corona_systemDrSearchlan",
         "name": "Corona DR search LAN",
         "description": "Check if Corona search on LAN is disabled",
         "host": "3dsmax",
+        "engine": "corona",
         "enabled": false,
         "collection": [
             "default"
@@ -836,13 +879,14 @@
         "check_args": [],
         "fix_fn": "fix_max_corona_systemDrSearchlan",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_corona_renderSelected",
         "name": "Corona render selected",
         "description": "Check if Corona render selected is disabled",
         "host": "3dsmax",
+        "engine": "corona",
         "enabled": true,
         "collection": [
             "default"
@@ -855,13 +899,14 @@
         "check_args": [],
         "fix_fn": "fix_max_corona_renderSelected",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_corona_overrideDisabled",
         "name": "Corona material override",
         "description": "Check if material override is disabled",
         "host": "3dsmax",
+        "engine": "corona",
         "enabled": true,
         "collection": [
             "default"
@@ -874,13 +919,14 @@
         "check_args": [],
         "fix_fn": "fix_max_corona_overrideDisabled",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_corona_overrideNoMaterial",
         "name": "Corona material override",
         "description": "Check if material override has no materials assigned",
         "host": "3dsmax",
+        "engine": "corona",
         "enabled": false,
         "collection": [
             "default"
@@ -893,13 +939,14 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_corona_infiniteRender",
         "name": "Corona infinite render",
         "description": "Check if render settings aren't set to infinite",
         "host": "3dsmax",
+        "engine": "corona",
         "enabled": true,
         "collection": [
             "default"
@@ -912,13 +959,14 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_corona_renderStamp",
         "name": "Corona render stamp",
         "description": "Check if Corona render stamp is disabled",
         "host": "3dsmax",
+        "engine": "corona",
         "enabled": true,
         "collection": [
             "default"
@@ -931,13 +979,14 @@
         "check_args": [],
         "fix_fn": "fix_max_corona_renderStamp",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_corona_vfbRegion",
         "name": "Corona VFB region",
         "description": "Check if Corona VFB region is disabled",
         "host": "3dsmax",
+        "engine": "corona",
         "enabled": true,
         "collection": [
             "default"
@@ -950,13 +999,14 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_fstorm_renderMask",
         "name": "FStorm render mask",
         "description": "Check if FStorm render mask is disabled",
         "host": "3dsmax",
+        "engine": "fstorm",
         "enabled": true,
         "collection": [
             "default"
@@ -969,13 +1019,14 @@
         "check_args": [],
         "fix_fn": "fix_max_fstorm_renderMask",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     },
     {
         "id": "max_fstorm_overrideDisabled",
         "name": "FStorm override",
         "description": "Check if FStorm override is disabled",
         "host": "3dsmax",
+        "engine": "fstorm",
         "enabled": true,
         "collection": [
             "default"
@@ -988,6 +1039,6 @@
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
-        "version": "1.0.2"
+        "version": "1.0.3"
     }
 ]
