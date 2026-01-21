@@ -118,5 +118,85 @@
         "fix_fn": "",
         "fix_args": [],
         "version": "1.0.0"
+    },
+    {
+        "id": "max_vray_systemDr",
+        "name": "V-Ray distributed rendering",
+        "description": "Check if V-Ray distributed rendering is disabled",
+        "host": "3dsmax",
+        "engine": "vray",
+        "enabled": true,
+        "collection": [
+            "cloud"
+        ],
+        "author": "Pulze",
+        "language": "maxscript",
+        "level": "critical",
+        "message": "V-Ray distributed rendering must be disabled for cloud rendering",
+        "check_fn": "check_max_vray_systemDr",
+        "check_args": [],
+        "fix_fn": "",
+        "fix_args": [],
+        "version": "1.0.0"
+    },
+    {
+        "id": "max_corona_systemDr",
+        "name": "Corona distributed rendering",
+        "description": "Check if Corona distributed rendering is disabled",
+        "host": "3dsmax",
+        "engine": "corona",
+        "enabled": true,
+        "collection": [
+            "cloud"
+        ],
+        "author": "Pulze",
+        "language": "maxscript",
+        "level": "critical",
+        "message": "Corona distributed rendering must be disabled for cloud rendering",
+        "check_fn": "check_max_corona_systemDr",
+        "check_args": [],
+        "fix_fn": "",
+        "fix_args": [],
+        "version": "1.0.0"
+    },
+    {
+        "id": "max_corona_renderSelected",
+        "name": "Corona render selected",
+        "description": "Check if Corona render selected is disabled",
+        "host": "3dsmax",
+        "engine": "corona",
+        "enabled": true,
+        "collection": [
+            "cloud"
+        ],
+        "author": "Pulze",
+        "language": "maxscript",
+        "level": "critical",
+        "message": "Corona render selected must be disabled for cloud rendering",
+        "check_fn": "check_max_corona_renderSelected",
+        "check_args": [],
+        "fix_fn": "",
+        "fix_args": [],
+        "version": "1.0.0"
+    },
+    {
+        "id": "max_vray_renderSelected",
+        "name": "V-Ray render selected",
+        "description": "Check if V-Ray render selected (render mask) is disabled",
+        "host": "3dsmax",
+        "engine": "vray",
+        "enabled": true,
+        "collection": [
+            "cloud"
+        ],
+        "author": "Pulze",
+        "language": "maxscript",
+        "level": "critical",
+        "message": "V-Ray render selected must be disabled for cloud rendering",
+        "check_fn": "check_max_vray_renderSelected",
+        "check_args": [],
+        "fix_fn": "",
+        "fix_args": [],
+        "version": "1.0.0"
     }
 ]
