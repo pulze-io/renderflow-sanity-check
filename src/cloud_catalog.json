@@ -20,46 +20,6 @@
         "version": "1.0.0"
     },
     {
-        "id": "max_vray_denoiser",
-        "name": "V-Ray denoiser CPU",
-        "description": "Check if V-Ray denoiser is not using GPU-based denoising engine",
-        "host": "3dsmax",
-        "engine": "vray",
-        "enabled": true,
-        "collection": [
-            "cloud"
-        ],
-        "author": "Pulze",
-        "language": "maxscript",
-        "level": "critical",
-        "message": "V-Ray GPU denoiser is not supported in cloud rendering",
-        "check_fn": "check_max_vray_denoiser",
-        "check_args": [],
-        "fix_fn": "",
-        "fix_args": [],
-        "version": "1.0.0"
-    },
-    {
-        "id": "max_corona_denoiser",
-        "name": "Corona denoiser CPU",
-        "description": "Check if Corona denoiser is not using NVIDIA AI (GPU-based)",
-        "host": "3dsmax",
-        "engine": "corona",
-        "enabled": true,
-        "collection": [
-            "cloud"
-        ],
-        "author": "Pulze",
-        "language": "maxscript",
-        "level": "critical",
-        "message": "Corona NVIDIA AI denoiser is not supported in cloud rendering",
-        "check_fn": "check_max_corona_denoiser",
-        "check_args": [],
-        "fix_fn": "",
-        "fix_args": [],
-        "version": "1.0.0"
-    },
-    {
         "id": "max_renderScript",
         "name": "Render scripts",
         "description": "Check if pre and post render scripts are disabled",
@@ -74,6 +34,26 @@
         "level": "critical",
         "message": "Pre/Post render scripts are not allowed in cloud rendering",
         "check_fn": "check_max_renderScript",
+        "check_args": [],
+        "fix_fn": "",
+        "fix_args": [],
+        "version": "1.0.0"
+    },
+    {
+        "id": "max_vray_denoiser",
+        "name": "V-Ray denoiser CPU",
+        "description": "Check if V-Ray denoiser is not using GPU-based denoising engine",
+        "host": "3dsmax",
+        "engine": "vray",
+        "enabled": true,
+        "collection": [
+            "cloud"
+        ],
+        "author": "Pulze",
+        "language": "maxscript",
+        "level": "critical",
+        "message": "V-Ray GPU denoiser is not supported in cloud rendering",
+        "check_fn": "check_max_vray_denoiser",
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
@@ -100,26 +80,6 @@
         "version": "1.0.0"
     },
     {
-        "id": "max_corona_infiniteRender",
-        "name": "Corona render limits",
-        "description": "Check if Corona has render limits set (pass, time, or noise limit)",
-        "host": "3dsmax",
-        "engine": "corona",
-        "enabled": true,
-        "collection": [
-            "cloud"
-        ],
-        "author": "Pulze",
-        "language": "maxscript",
-        "level": "critical",
-        "message": "Corona render must have pass, time, or noise limits set",
-        "check_fn": "check_max_corona_infiniteRender",
-        "check_args": [],
-        "fix_fn": "",
-        "fix_args": [],
-        "version": "1.0.0"
-    },
-    {
         "id": "max_vray_systemDr",
         "name": "V-Ray distributed rendering",
         "description": "Check if V-Ray distributed rendering is disabled",
@@ -134,6 +94,66 @@
         "level": "critical",
         "message": "V-Ray distributed rendering must be disabled for cloud rendering",
         "check_fn": "check_max_vray_systemDr",
+        "check_args": [],
+        "fix_fn": "",
+        "fix_args": [],
+        "version": "1.0.0"
+    },
+    {
+        "id": "max_vray_renderSelected",
+        "name": "V-Ray render selected",
+        "description": "Check if V-Ray render selected (render mask) is disabled",
+        "host": "3dsmax",
+        "engine": "vray",
+        "enabled": true,
+        "collection": [
+            "cloud"
+        ],
+        "author": "Pulze",
+        "language": "maxscript",
+        "level": "critical",
+        "message": "V-Ray render selected must be disabled for cloud rendering",
+        "check_fn": "check_max_vray_renderSelected",
+        "check_args": [],
+        "fix_fn": "",
+        "fix_args": [],
+        "version": "1.0.0"
+    },
+    {
+        "id": "max_corona_denoiser",
+        "name": "Corona denoiser CPU",
+        "description": "Check if Corona denoiser is not using NVIDIA AI (GPU-based)",
+        "host": "3dsmax",
+        "engine": "corona",
+        "enabled": true,
+        "collection": [
+            "cloud"
+        ],
+        "author": "Pulze",
+        "language": "maxscript",
+        "level": "critical",
+        "message": "Corona NVIDIA AI denoiser is not supported in cloud rendering",
+        "check_fn": "check_max_corona_denoiser",
+        "check_args": [],
+        "fix_fn": "",
+        "fix_args": [],
+        "version": "1.0.0"
+    },
+    {
+        "id": "max_corona_infiniteRender",
+        "name": "Corona render limits",
+        "description": "Check if Corona has render limits set (pass, time, or noise limit)",
+        "host": "3dsmax",
+        "engine": "corona",
+        "enabled": true,
+        "collection": [
+            "cloud"
+        ],
+        "author": "Pulze",
+        "language": "maxscript",
+        "level": "critical",
+        "message": "Corona render must have pass, time, or noise limits set",
+        "check_fn": "check_max_corona_infiniteRender",
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],
@@ -174,26 +194,6 @@
         "level": "critical",
         "message": "Corona render selected must be disabled for cloud rendering",
         "check_fn": "check_max_corona_renderSelected",
-        "check_args": [],
-        "fix_fn": "",
-        "fix_args": [],
-        "version": "1.0.0"
-    },
-    {
-        "id": "max_vray_renderSelected",
-        "name": "V-Ray render selected",
-        "description": "Check if V-Ray render selected (render mask) is disabled",
-        "host": "3dsmax",
-        "engine": "vray",
-        "enabled": true,
-        "collection": [
-            "cloud"
-        ],
-        "author": "Pulze",
-        "language": "maxscript",
-        "level": "critical",
-        "message": "V-Ray render selected must be disabled for cloud rendering",
-        "check_fn": "check_max_vray_renderSelected",
         "check_args": [],
         "fix_fn": "",
         "fix_args": [],

@@ -17,6 +17,15 @@ fn check_max_supportedRenderer=
 )
 
 /*
+ * Pre/Post Render scripts
+ * Check if pre and post render script execution is disabled
+ */
+fn check_max_renderScript=
+(	
+	return usePostRendScript == false and postRendScript == "" and usePreRendScript == false and preRendScript == ""
+)
+
+/*
  * V-Ray denoiser CPU
  * Check if V-Ray denoiser is disabled or set to CPU-based (not CUDA/OptiX)
  */
@@ -41,27 +50,6 @@ fn check_max_vray_denoiser=
 )
 
 /*
- * Corona denoiser CPU
- * Check if Corona denoiser is using CPU-based denoising
- */
-fn check_max_corona_denoiser=
-(	
-	if (isCorona()) do
-	(		
-		return renderers.current.denoise_filterType != 4 -- denoise_filterType: 4 = NVIDIA AI (GPU)
-	)
-)
-
-/*
- * Pre/Post Render scripts
- * Check if pre and post render script execution is disabled
- */
-fn check_max_renderScript=
-(	
-	return usePostRendScript == false and postRendScript == "" and usePreRendScript == false and preRendScript == ""
-)
-
-/*
  * V-Ray infinite render
  * Check if V-Ray doesn't have unlimited render time
  */
@@ -75,18 +63,6 @@ fn check_max_vray_infiniteRender=
 )
 
 /*
- * Corona infinite render
- * Check if Corona has render limits set (pass, time, or noise)
- */
-fn check_max_corona_infiniteRender=
-(	
-	if (isCorona()) do
-	(		
-		return renderers.current.progressive_passLimit != 0 or renderers.current.progressive_timeLimit != 0 or renderers.current.adaptivity_targetError != 0.0
-	)
-)
-
-/*
  * V-Ray distributed rendering 
  * Check if the V-Ray distributed rendering is disabled
  */
@@ -95,6 +71,42 @@ fn check_max_vray_systemDr=
 	if (isVray()) do
 	(		
 		return renderers.current.system_distributedRender != true
+	)
+)
+
+/*
+ * V-Ray render selected
+ * Checks if V-Ray render selected is disabled
+ */
+fn check_max_vray_renderSelected=
+(
+    if (isVray()) do
+    (
+    	return renderers.current.imageSampler_renderMask_type != 2 -- selected
+    )
+)
+
+/*
+ * Corona denoiser CPU
+ * Check if Corona denoiser is using CPU-based denoising
+ */
+fn check_max_corona_denoiser=
+(	
+	if (isCorona()) do
+	(		
+		return renderers.current.denoise_filterType != 4 -- denoise_filterType: 4 = NVIDIA AI (GPU)
+	)
+)
+
+/*
+ * Corona infinite render
+ * Check if Corona has render limits set (pass, time, or noise)
+ */
+fn check_max_corona_infiniteRender=
+(	
+	if (isCorona()) do
+	(		
+		return renderers.current.progressive_passLimit != 0 or renderers.current.progressive_timeLimit != 0 or renderers.current.adaptivity_targetError != 0.0
 	)
 )
 
@@ -119,17 +131,5 @@ fn check_max_corona_renderSelected=
    	if (isCorona()) do
     (
     	return renderers.current.renderSelected_mode != 1 -- viewport selection
-    )
-)
-
-/*
- * V-Ray render selected
- * Checks if V-Ray render selected is disabled
- */
-fn check_max_vray_renderSelected=
-(
-    if (isVray()) do
-    (
-    	return renderers.current.imageSampler_renderMask_type != 2 -- selected
     )
 )
