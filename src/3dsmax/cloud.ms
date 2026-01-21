@@ -26,7 +26,7 @@ fn check_max_renderScript=
 )
 
 /*
- * V-Ray denoiser CPU
+ * V-Ray denoiser
  * Check if V-Ray denoiser is disabled or set to CPU-based (not CUDA/OptiX)
  */
 fn check_max_vray_denoiser=
@@ -87,7 +87,7 @@ fn check_max_vray_renderSelected=
 )
 
 /*
- * Corona denoiser CPU
+ * Corona denoiser
  * Check if Corona denoiser is using CPU-based denoising
  */
 fn check_max_corona_denoiser=
