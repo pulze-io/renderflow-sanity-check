@@ -418,7 +418,7 @@
         "author": "Pulze",
         "language": "maxscript",
         "level": "critical",
-        "message": "Color management can causes network rendering issues",
+        "message": "Not compatible with network rendering",
         "check_fn": "check_max_colormanagement_mode",
         "check_args": [],
         "fix_fn": "fix_max_colormanagement_mode",
