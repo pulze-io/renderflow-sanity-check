@@ -301,6 +301,51 @@ fn fix_max_objects_noMaterials=
 )
 
 /*
+ * Color management mode
+ * Check if color management settings for 3ds Max 2024 and 2025
+ */
+fn check_max_colormanagement_mode=
+(
+   try
+   (
+      local version = maxversion()
+      local year = version[8]
+
+      if (year == 2024 or year == 2025) then
+      (
+         return ColorPipelineMgr.mode == #Unmanaged or ColorPipelineMgr.mode == #gamma
+      )
+      else
+      (
+         return true
+      )
+   )
+   catch
+   (
+      return true
+   )
+)
+
+/*
+ * Fix color management mode
+ * Sets color management to legacy mode for network rendering compatibility
+ */
+fn fix_max_colormanagement_mode=
+(
+   try
+   (
+      local version = maxversion()
+      local year = version[8]
+
+      if (year == 2024 or year == 2025) then
+      (
+         ColorPipelineMgr.mode = #gamma
+      )
+   )
+   catch ()
+)
+
+/*
  * Vray distributed rendering 
  * Check if the Vray distributed rendering is disabled
  */

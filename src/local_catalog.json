@@ -406,6 +406,26 @@
         "version": "1.0.4"
     },
     {
+        "id": "max_colormanagement_mode",
+        "name": "Color management mode",
+        "description": "Check if color management settings for 3ds Max 2024 and 2025",
+        "host": "3dsmax",
+        "engine": null,
+        "enabled": true,
+        "collection": [
+            "default"
+        ],
+        "author": "Pulze",
+        "language": "maxscript",
+        "level": "critical",
+        "message": "Color management can causes network rendering issues",
+        "check_fn": "check_max_colormanagement_mode",
+        "check_args": [],
+        "fix_fn": "fix_max_colormanagement_mode",
+        "fix_args": [],
+        "version": "1.0.4"
+    },
+    {
         "id": "max_vray_systemDr",
         "name": "V-Ray DR",
         "description": "Check if V-Ray DR is disabled",
